@@ -4,4 +4,4 @@ Student study notes for B.Ed (Hons) core courses (PC 111–PC 127), M.Ed courses
 
 Features: one page per course, search across all notes, MCQ practice, chapter progress tracking, dark mode, mobile layout, and a downloadable PDF for every course (`pdf/`).
 
-This is a static site served by GitHub Pages from the `main` branch.
+Live site: https://nishattasnim200026-art.github.io/education-study-notes-Nishat/
