@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCQ practice · Education Study Notes</title>
+<meta name="description" content="Student study notes for B.Ed (Hons) and M.Ed courses in Education">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+  <button class="menu-btn" id="menuBtn" aria-label="Open course menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><span class="brand-mark">E</span><span class="brand-text">Education Study Notes</span></a>
+  <div class="search" role="search">
+    <input id="q" type="search" placeholder="Search all notes" autocomplete="off" aria-label="Search all notes">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark mode">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Courses">
+<a class="side-home" href="index.html">Home</a>
+<a class="side-home" href="practice.html">MCQ practice</a>
+<div class="side-group"><div class="side-glabel">B.Ed (Hons) core courses</div><ul>
+<li><a href="pc111.html"><span class="code">PC 111</span> Introduction to Education</a>
+</li>
+<li><a href="pc112.html"><span class="code">PC 112</span> Education in Bangladesh</a>
+</li>
+<li><a href="pc113.html"><span class="code">PC 113</span> Educational Psychology</a>
+</li>
+<li><a href="pc114.html"><span class="code">PC 114</span> Instructional Technology</a>
+</li>
+<li><a href="pc115.html"><span class="code">PC 115</span> Philosophical Foundation of Education</a>
+</li>
+<li><a href="pc116.html"><span class="code">PC 116</span> Sociological Foundation of Education</a>
+</li>
+<li><a href="pc117.html"><span class="code">PC 117</span> Introduction to Educational Assessment</a>
+</li>
+<li><a href="pc118.html"><span class="code">PC 118</span> Organisation and Management of Educational Institutions</a>
+</li>
+<li><a href="pc119.html"><span class="code">PC 119</span> Education and Development</a>
+</li>
+<li><a href="pc120.html"><span class="code">PC 120</span> Introduction to Curriculum</a>
+</li>
+<li><a href="pc121.html"><span class="code">PC 121</span> Value Education</a>
+</li>
+<li><a href="pc122.html"><span class="code">PC 122</span> Gender Education</a>
+</li>
+<li><a href="pc123.html"><span class="code">PC 123</span> Environmental Education</a>
+</li>
+<li><a href="pc124.html"><span class="code">PC 124</span> Nonformal and Lifelong Education</a>
+</li>
+<li><a href="pc125.html"><span class="code">PC 125</span> Introduction to Educational Research</a>
+</li>
+<li><a href="pc126.html"><span class="code">PC 126</span> Statistics in Education</a>
+</li>
+<li><a href="pc127.html"><span class="code">PC 127</span> Inclusion in Education</a>
+</li>
+</ul></div>
+<div class="side-group"><div class="side-glabel">M.Ed courses</div><ul>
+<li><a href="ed501.html"><span class="code">ED 501</span> Education in Global Perspective</a>
+</li>
+<li><a href="ed502.html"><span class="code">ED 502</span> Policy, Strategy and Leadership in Education</a>
+</li>
+<li><a href="ed503.html"><span class="code">ED 503</span> Information and Communication Technology in Education</a>
+</li>
+<li><a href="ed504.html"><span class="code">ED 504</span> Methods and Techniques of Educational Research</a>
+</li>
+<li><a href="eer580.html"><span class="code">EER 580</span> Statistics in Educational Research</a>
+</li>
+<li><a href="eer581.html"><span class="code">EER 581</span> Research for Educational Changes</a>
+</li>
+<li><a href="eer582.html"><span class="code">EER 582</span> Assessment and Evaluation Techniques in Education</a>
+</li>
+<li><a href="eer583.html"><span class="code">EER 583</span> Practicing Educational Research</a>
+</li>
+</ul></div>
+<div class="side-group"><div class="side-glabel">Open and Distance Learning</div><ul>
+<li><a href="odl.html"><span class="code">ODL</span> Open and Distance Learning</a>
+</li>
+</ul></div>
+<div class="side-group"><div class="side-glabel">Beyond the syllabus</div><ul>
+<li><a href="trends-2026.html"><span class="code">Trends 2026</span> Education Today: News, Trends, Theories and Approaches Every Educator Should Know</a>
+</li>
+</ul></div>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="main" id="main">
+
+<section class="welcome practice">
+  <div class="kicker">Self-test</div>
+  <h1>MCQ practice</h1>
+  <p>Random questions from the exam banks of every course. Pick a course or practise from all of them.</p>
+  <div class="pr-controls">
+    <label>Course <select id="prCourse"><option value="">All courses</option><option value="pc111.html">PC 111 Introduction to Education</option><option value="pc112.html">PC 112 Education in Bangladesh</option><option value="pc113.html">PC 113 Educational Psychology</option><option value="pc114.html">PC 114 Instructional Technology</option><option value="pc115.html">PC 115 Philosophical Foundation of Education</option><option value="pc116.html">PC 116 Sociological Foundation of Education</option><option value="pc117.html">PC 117 Introduction to Educational Assessment</option><option value="pc118.html">PC 118 Organisation and Management of Educational Institutions</option><option value="pc119.html">PC 119 Education and Development</option><option value="pc120.html">PC 120 Introduction to Curriculum</option><option value="pc121.html">PC 121 Value Education</option><option value="pc122.html">PC 122 Gender Education</option><option value="pc123.html">PC 123 Environmental Education</option><option value="pc124.html">PC 124 Nonformal and Lifelong Education</option><option value="pc125.html">PC 125 Introduction to Educational Research</option><option value="pc126.html">PC 126 Statistics in Education</option><option value="pc127.html">PC 127 Inclusion in Education</option><option value="ed501.html">ED 501 Education in Global Perspective</option><option value="ed502.html">ED 502 Policy, Strategy and Leadership in Education</option><option value="ed503.html">ED 503 Information and Communication Technology in Education</option><option value="ed504.html">ED 504 Methods and Techniques of Educational Research</option><option value="eer580.html">EER 580 Statistics in Educational Research</option><option value="eer581.html">EER 581 Research for Educational Changes</option><option value="eer582.html">EER 582 Assessment and Evaluation Techniques in Education</option><option value="eer583.html">EER 583 Practicing Educational Research</option><option value="odl.html">ODL Open and Distance Learning</option><option value="trends-2026.html">Trends 2026 Education Today: News, Trends, Theories and Approaches Every Educator Should Know</option></select></label>
+    <span class="score" id="prScore">Score 0 / 0</span>
+  </div>
+  <div class="quiz" id="quiz"><p>Loading questions…</p></div>
+</section>
+
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

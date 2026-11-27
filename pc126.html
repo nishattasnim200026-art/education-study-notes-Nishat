@@ -1,0 +1,2302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PC 126 Statistics in Education</title>
+<meta name="description" content="Statistical literacy for educators: describing, displaying, relating and inferring from educational data with Excel and SPSS">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+  <button class="menu-btn" id="menuBtn" aria-label="Open course menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><span class="brand-mark">E</span><span class="brand-text">Education Study Notes</span></a>
+  <div class="search" role="search">
+    <input id="q" type="search" placeholder="Search all notes" autocomplete="off" aria-label="Search all notes">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="theme-btn" id="themeBtn" aria-label="Switch light or dark mode">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Courses">
+<a class="side-home" href="index.html">Home</a>
+<a class="side-home" href="practice.html">MCQ practice</a>
+<div class="side-group"><div class="side-glabel">B.Ed (Hons) core courses</div><ul>
+<li><a href="pc111.html"><span class="code">PC 111</span> Introduction to Education</a>
+</li>
+<li><a href="pc112.html"><span class="code">PC 112</span> Education in Bangladesh</a>
+</li>
+<li><a href="pc113.html"><span class="code">PC 113</span> Educational Psychology</a>
+</li>
+<li><a href="pc114.html"><span class="code">PC 114</span> Instructional Technology</a>
+</li>
+<li><a href="pc115.html"><span class="code">PC 115</span> Philosophical Foundation of Education</a>
+</li>
+<li><a href="pc116.html"><span class="code">PC 116</span> Sociological Foundation of Education</a>
+</li>
+<li><a href="pc117.html"><span class="code">PC 117</span> Introduction to Educational Assessment</a>
+</li>
+<li><a href="pc118.html"><span class="code">PC 118</span> Organisation and Management of Educational Institutions</a>
+</li>
+<li><a href="pc119.html"><span class="code">PC 119</span> Education and Development</a>
+</li>
+<li><a href="pc120.html"><span class="code">PC 120</span> Introduction to Curriculum</a>
+</li>
+<li><a href="pc121.html"><span class="code">PC 121</span> Value Education</a>
+</li>
+<li><a href="pc122.html"><span class="code">PC 122</span> Gender Education</a>
+</li>
+<li><a href="pc123.html"><span class="code">PC 123</span> Environmental Education</a>
+</li>
+<li><a href="pc124.html"><span class="code">PC 124</span> Nonformal and Lifelong Education</a>
+</li>
+<li><a href="pc125.html"><span class="code">PC 125</span> Introduction to Educational Research</a>
+</li>
+<li class="current"><a href="pc126.html"><span class="code">PC 126</span> Statistics in Education</a>
+<ul class="side-toc">
+<li><a href="#unit-1-introduction-to-statistics" data-toc="unit-1-introduction-to-statistics">Unit 1: Introduction to Statistics</a></li>
+<li><a href="#unit-2-organising-and-displaying-data" data-toc="unit-2-organising-and-displaying-data">Unit 2: Organising and Displaying Data</a></li>
+<li><a href="#unit-3-summarising-and-describing-data" data-toc="unit-3-summarising-and-describing-data">Unit 3: Summarising and Describing Data</a></li>
+<li><a href="#unit-4-studying-relationships" data-toc="unit-4-studying-relationships">Unit 4: Studying Relationships</a></li>
+<li><a href="#unit-5-probability-and-inferential-statistics" data-toc="unit-5-probability-and-inferential-statistics">Unit 5: Probability and Inferential Statistics</a></li>
+<li><a href="#unit-6-data-collection-analysis-and-interpretation" data-toc="unit-6-data-collection-analysis-and-interpretation">Unit 6: Data Collection, Analysis and Interpretation</a></li>
+<li><a href="#exam-preparation-bank" data-toc="exam-preparation-bank">Exam Preparation Bank</a></li>
+<li><a href="#references" data-toc="references">References</a></li>
+</ul>
+</li>
+<li><a href="pc127.html"><span class="code">PC 127</span> Inclusion in Education</a>
+</li>
+</ul></div>
+<div class="side-group"><div class="side-glabel">M.Ed courses</div><ul>
+<li><a href="ed501.html"><span class="code">ED 501</span> Education in Global Perspective</a>
+</li>
+<li><a href="ed502.html"><span class="code">ED 502</span> Policy, Strategy and Leadership in Education</a>
+</li>
+<li><a href="ed503.html"><span class="code">ED 503</span> Information and Communication Technology in Education</a>
+</li>
+<li><a href="ed504.html"><span class="code">ED 504</span> Methods and Techniques of Educational Research</a>
+</li>
+<li><a href="eer580.html"><span class="code">EER 580</span> Statistics in Educational Research</a>
+</li>
+<li><a href="eer581.html"><span class="code">EER 581</span> Research for Educational Changes</a>
+</li>
+<li><a href="eer582.html"><span class="code">EER 582</span> Assessment and Evaluation Techniques in Education</a>
+</li>
+<li><a href="eer583.html"><span class="code">EER 583</span> Practicing Educational Research</a>
+</li>
+</ul></div>
+<div class="side-group"><div class="side-glabel">Open and Distance Learning</div><ul>
+<li><a href="odl.html"><span class="code">ODL</span> Open and Distance Learning</a>
+</li>
+</ul></div>
+<div class="side-group"><div class="side-glabel">Beyond the syllabus</div><ul>
+<li><a href="trends-2026.html"><span class="code">Trends 2026</span> Education Today: News, Trends, Theories and Approaches Every Educator Should Know</a>
+</li>
+</ul></div>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="main" id="main">
+
+<article class="course" data-course="pc126.html">
+<header class="hero">
+  <div class="kicker">B.ED (HONS) CORE COURSE · STUDENT STUDY NOTES</div>
+  <h1 class="course-title"><span class="code-pill">PC 126</span> Statistics in Education</h1>
+  <p class="subtitle">Statistical literacy for educators: describing, displaying, relating and inferring from educational data with Excel and SPSS</p>
+  <dl class="meta"><div><dt>Credit Hours</dt><dd>4</dd></div><div><dt>Units</dt><dd>6</dd></div><div><dt>Built On</dt><dd>Course syllabus; Garrett (1973), Gravetter &amp; Wallnau (2017), Hinkle, Wiersma &amp; Jurs (2003), Howell (2007), Healey (2010), Weiss (2012), Field (2018), Pallant (2020)</dd></div></dl>
+  <div class="hero-actions"><a class="btn" href="pdf/pc126.pdf" download>Download PDF</a><a class="btn ghost" href="practice.html?course=pc126.html">Practise MCQs</a></div>
+  <div class="progress"><div class="bar"><span id="pbar"></span></div><span id="ptext"></span></div>
+</header>
+<details class="toc" open><summary>Contents</summary><ol><li><a href="#unit-1-introduction-to-statistics">Unit 1: Introduction to Statistics</a><span class="tick" data-tick="unit-1-introduction-to-statistics"></span></li><li><a href="#unit-2-organising-and-displaying-data">Unit 2: Organising and Displaying Data</a><span class="tick" data-tick="unit-2-organising-and-displaying-data"></span></li><li><a href="#unit-3-summarising-and-describing-data">Unit 3: Summarising and Describing Data</a><span class="tick" data-tick="unit-3-summarising-and-describing-data"></span></li><li><a href="#unit-4-studying-relationships">Unit 4: Studying Relationships</a><span class="tick" data-tick="unit-4-studying-relationships"></span></li><li><a href="#unit-5-probability-and-inferential-statistics">Unit 5: Probability and Inferential Statistics</a><span class="tick" data-tick="unit-5-probability-and-inferential-statistics"></span></li><li><a href="#unit-6-data-collection-analysis-and-interpretation">Unit 6: Data Collection, Analysis and Interpretation</a><span class="tick" data-tick="unit-6-data-collection-analysis-and-interpretation"></span></li><li><a href="#exam-preparation-bank">Exam Preparation Bank</a><span class="tick" data-tick="exam-preparation-bank"></span></li><li><a href="#references">References</a><span class="tick" data-tick="references"></span></li></ol></details>
+<div class="prose">
+
+
+<h3 id="about-this-course">About this course</h3>
+<p>Statistics is the science of collecting, organising, summarising,
+analysing and interpreting numerical data. For teachers, researchers and
+educational planners it is the language in which test results, enrolment
+trends, programme effects and research findings are expressed. This
+course builds statistical literacy and the competence to use
+quantitative methods: the basic concepts of variables, data and scales
+of measurement; organising and displaying data in tables and graphs;
+measures of central tendency and variability; correlation and
+regression; probability, the normal distribution and statistical
+inference; and the practical cycle of collecting, analysing and
+interpreting educational data with Microsoft Excel and IBM SPSS. Worked
+examples are given step by step so that the notes can be used directly
+for teaching.</p>
+<h3 id="course-objectives">Course objectives</h3>
+<ul>
+<li><p>Explain the meaning, role and branches of statistics and the
+scales of measurement.</p></li>
+<li><p>Organise data into frequency distributions, tables and graphs,
+including boxplots.</p></li>
+<li><p>Compute and interpret measures of central tendency and
+variability.</p></li>
+<li><p>Compute and interpret Pearson and Spearman correlation and simple
+linear regression.</p></li>
+<li><p>Explain probability, the normal distribution, estimation and
+hypothesis testing.</p></li>
+<li><p>Carry out and interpret basic analyses in Excel and
+SPSS.</p></li>
+</ul>
+
+
+
+
+
+
+
+
+
+<div class="box box-howto"><div class="box-label">How To Use These Notes</div>
+<p>Each unit follows the official syllabus order. Read the narrative
+first, then the <strong>Key point</strong> boxes, then test yourself
+with the <strong>Exam focus</strong> questions.</p>
+<p>Golden boxes = must-remember ideas. Teal boxes = definitions and study tips. Green boxes = Bangladesh context.</p>
+<p>The final chapter is a question bank (MCQs with answers, short and broad questions) in the style of university examinations, followed by full references in APA 7th style.</p>
+<p>Statistics on enrolment, budgets and policies change every year. Before an exam, check the latest BANBEIS, DPE, UGC and UNESCO figures.</p></div>
+<h1 id="unit-1-introduction-to-statistics">Unit 1: Introduction to
+Statistics</h1><button class="done-btn" data-unit="unit-1-introduction-to-statistics" type="button">Mark as studied</button>
+<h2 id="meaning-of-statistics">1.1 Meaning of statistics</h2>
+<p>The word <em>statistics</em> is derived from the Latin
+<em>status</em> and the Italian <em>statista</em> (a person who deals
+with affairs of the state). Originally it meant data collected by
+governments about population and resources. Today it has two meanings:
+(1) in the plural, <strong>numerical facts</strong> (e.g., enrolment
+statistics of BANBEIS); and (2) in the singular, the
+<strong>science</strong> of collecting, organising, analysing and
+interpreting data.</p>
+<div class="box box-def"><div class="box-label">Definition</div>
+<p><strong>Statistics (Croxton &amp; Cowden)</strong>: "Statistics may
+be defined as the collection, presentation, analysis and interpretation
+of numerical data."</p></div>
+<div class="box box-def"><div class="box-label">Definition</div>
+<p><strong>Statistics (Gravetter &amp; Wallnau, 2017)</strong>: "The
+term statistics refers to a set of mathematical procedures for
+organizing, summarizing, and interpreting information."</p></div>
+<h2 id="role-of-statistics-in-education">1.2 Role of statistics in
+education</h2>
+<p><img alt="Uses of statistics in education" loading="lazy" src="media/PC126_Statistics_in_Education/media/794657496cb9fa8513b49c4503c68ffab883e2c7.png" title="Uses of statistics in education"/></p>
+<p><strong>Figure 1.</strong> <em>Uses of statistics in
+education</em></p>
+<ul>
+<li><p><strong>Teachers</strong> use the mean, standard deviation and
+percentile ranks to interpret class performance, convert marks into
+grades and identify learners who need support.</p></li>
+<li><p><strong>Test developers</strong> use item analysis, reliability
+coefficients and norms (see PC 117).</p></li>
+<li><p><strong>Researchers</strong> use inferential statistics to test
+hypotheses and generalise from samples to populations.</p></li>
+<li><p><strong>Planners</strong> use enrolment, gender parity, dropout
+and survival rates (e.g., BANBEIS Annual Primary School Census and
+Bangladesh Education Statistics).</p></li>
+</ul>
+<p><strong>Limitations:</strong> statistics deals with aggregates, not
+individuals; results are true only on average; it can be misused or
+misinterpreted ("lies, damned lies and statistics"); it cannot study
+qualitative phenomena directly; laws are probabilistic, not exact.</p>
+<h2 id="variables-attributes-and-constructs">1.3 Variables, attributes
+and constructs</h2>
+<p>A <strong>variable</strong> is a characteristic that can take
+different values for different individuals (e.g., age, test score,
+gender). A <strong>constant</strong> has the same value for everyone in
+the study. A <strong>construct</strong> is a hypothetical, abstract
+attribute (intelligence, motivation, anxiety) that must be operationally
+defined and measured indirectly.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Classification</strong></th>
+<th><strong>Types</strong></th>
+<th><strong>Examples</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>By nature</strong></th>
+<th><strong>Qualitative (categorical)</strong> vs <strong>quantitative
+(numerical)</strong></th>
+<th>Gender, religion vs marks, age</th>
+</tr>
+<tr class="header">
+<th><strong>By values</strong></th>
+<th><strong>Discrete</strong> (countable, whole numbers) vs
+<strong>continuous</strong> (any value in a range)</th>
+<th>Number of siblings vs height, time</th>
+</tr>
+<tr class="odd">
+<th><strong>By role</strong></th>
+<th><strong>Independent</strong> vs <strong>dependent</strong> (plus
+moderating, mediating, control)</th>
+<th>Teaching method vs achievement</th>
+</tr>
+<tr class="header">
+<th><strong>By number studied</strong></th>
+<th><strong>Univariate</strong> (one), <strong>bivariate</strong> (two),
+<strong>multivariate</strong> (more)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p>Studying an <strong>individual variable</strong> answers "what is the
+distribution?" (e.g., average achievement). Studying the
+<strong>relationship between variables</strong> answers "do they go
+together?" (correlation) or "do groups differ?" (comparison).</p>
+<h2 id="data-and-data-structure">1.4 Data and data structure</h2>
+<p><strong>Data</strong> (singular <em>datum</em>) are measurements or
+observations recorded for analysis. A <strong>data set</strong> is a
+collection of data; a <strong>score</strong> or <strong>raw
+score</strong> is a single measurement.</p>
+<ul>
+<li><p><strong>Primary data:</strong> collected first-hand by the
+researcher (questionnaire, test).</p></li>
+<li><p><strong>Secondary data:</strong> collected by others (BANBEIS,
+census, PISA data).</p></li>
+<li><p><strong>Cross-sectional vs time-series data.</strong></p></li>
+<li><p><strong>Data structure:</strong> in a data matrix (Excel, SPSS),
+each <strong>row is a case</strong> (student) and each <strong>column is
+a variable</strong>.</p></li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>ID</strong></th>
+<th><strong>Gender (1 = M, 2 = F)</strong></th>
+<th><strong>School type (1 = Govt, 2 = Non-govt)</strong></th>
+<th><strong>Math score</strong></th>
+<th><strong>Study hours</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>1</strong></th>
+<th>2</th>
+<th>1</th>
+<th>72</th>
+<th>3</th>
+</tr>
+<tr class="header">
+<th><strong>2</strong></th>
+<th>1</th>
+<th>2</th>
+<th>58</th>
+<th>1</th>
+</tr>
+<tr class="odd">
+<th><strong>3</strong></th>
+<th>2</th>
+<th>2</th>
+<th>81</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<h2 id="scales-of-measurement-stevens-1946">1.5 Scales of measurement
+(Stevens, 1946)</h2>
+<p>S. S. Stevens classified measurement into four levels. Each higher
+level has all the properties of the lower ones plus one more.</p>
+<p><img alt="The four scales of measurement, from lowest to highest (Stevens, 1946)" loading="lazy" src="media/PC126_Statistics_in_Education/media/25089f34b3b673b62bc22a22d5e9943137770ad3.png" title="The four scales of measurement, from lowest to highest (Stevens, 1946)"/></p>
+<p><strong>Figure 2.</strong> <em>The four scales of measurement, from
+lowest to highest (Stevens, 1946)</em></p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Scale</strong></th>
+<th><strong>Properties</strong></th>
+<th><strong>Permissible statistics</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Nominal</strong></th>
+<th>Identity (classification)</th>
+<th>Frequency, percentage, mode, chi-square</th>
+<th>Gender, division, school type</th>
+</tr>
+<tr class="header">
+<th><strong>Ordinal</strong></th>
+<th>Identity + order</th>
+<th>Median, percentiles, Spearman's rho, Mann–Whitney</th>
+<th>Merit position, Likert item</th>
+</tr>
+<tr class="odd">
+<th><strong>Interval</strong></th>
+<th>Identity + order + equal intervals</th>
+<th>Mean, SD, Pearson <em>r</em>, t-test, ANOVA</th>
+<th>Celsius temperature, IQ</th>
+</tr>
+<tr class="header">
+<th><strong>Ratio</strong></th>
+<th>All above + absolute (true) zero</th>
+<th>All statistics, including ratios and coefficient of variation</th>
+<th>Height, weight, reaction time</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<div class="box box-tip"><div class="box-label">Study tip</div><p>Memory aid: NOIR (Nominal, Ordinal, Interval, Ratio). A score of 0 on an achievement test does not mean zero knowledge, so most test scores are treated as interval, not ratio.</p></div>
+<h2 id="population-and-sample-parameter-and-statistic">1.6 Population
+and sample; parameter and statistic</h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Term</strong></th>
+<th><strong>Meaning</strong></th>
+<th><strong>Symbol</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Population</strong></th>
+<th>The entire group of interest</th>
+<th>Size N</th>
+</tr>
+<tr class="header">
+<th><strong>Sample</strong></th>
+<th>A subset of the population actually studied</th>
+<th>Size n</th>
+</tr>
+<tr class="odd">
+<th><strong>Parameter</strong></th>
+<th>A numerical characteristic of a <strong>population</strong></th>
+<th>Greek letters: μ (mean), σ (SD), ρ (correlation)</th>
+</tr>
+<tr class="header">
+<th><strong>Statistic</strong></th>
+<th>A numerical characteristic of a <strong>sample</strong></th>
+<th>Roman letters: x̄ or M (mean), s (SD), r (correlation)</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<div class="box box-key"><div class="box-label">Key Point</div>
+<p><strong>P</strong>arameter goes with <strong>P</strong>opulation;
+<strong>S</strong>tatistic goes with <strong>S</strong>ample.
+Inferential statistics uses sample statistics to estimate population
+parameters.</p></div>
+<h2 id="descriptive-and-inferential-statistics">1.7 Descriptive and
+inferential statistics</h2>
+<p><img alt="The two major branches of statistics" loading="lazy" src="media/PC126_Statistics_in_Education/media/f2793898431c7d8c66d351dd54f59a503d089631.png" title="The two major branches of statistics"/></p>
+<p><strong>Figure 3.</strong> <em>The two major branches of
+statistics</em></p>
+<h2 id="statistical-notation-and-basic-mathematics">1.8 Statistical
+notation and basic mathematics</h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Symbol</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+<tr class="odd">
+<th>X, Y</th>
+<th>Raw scores on variables X and Y</th>
+</tr>
+<tr class="header">
+<th>N, n</th>
+<th>Number of scores in population, sample</th>
+</tr>
+<tr class="odd">
+<th>Σ (sigma)</th>
+<th>"Sum of"; ΣX = X₁ + X₂ + … + Xₙ</th>
+</tr>
+<tr class="header">
+<th>ΣX²</th>
+<th>Sum of squared scores (square first, then add)</th>
+</tr>
+<tr class="odd">
+<th>(ΣX)²</th>
+<th>Square of the sum (add first, then square)</th>
+</tr>
+<tr class="header">
+<th>f</th>
+<th>Frequency</th>
+</tr>
+<tr class="odd">
+<th>x̄, μ</th>
+<th>Sample mean, population mean</th>
+</tr>
+<tr class="header">
+<th>s, σ</th>
+<th>Sample SD, population SD</th>
+</tr>
+<tr class="odd">
+<th>s², σ²</th>
+<th>Variance</th>
+</tr>
+<tr class="header">
+<th>r, ρ</th>
+<th>Correlation coefficient</th>
+</tr>
+<tr class="odd">
+<th>z</th>
+<th>Standard score</th>
+</tr>
+<tr class="header">
+<th>H₀, H₁</th>
+<th>Null and alternative hypotheses</th>
+</tr>
+<tr class="odd">
+<th>α</th>
+<th>Level of significance</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><strong>Order of operations:</strong> brackets → squares and roots →
+multiplication and division → summation → addition and subtraction.
+<strong>Rounding:</strong> carry at least two more decimal places than
+the final answer requires.</p>
+<div class="box box-exam"><div class="box-label">Exam Focus</div>
+<p>Likely questions: "Define statistics and explain its importance in
+education." "Explain the scales of measurement with examples."
+"Distinguish between parameter and statistic; descriptive and
+inferential statistics."</p></div>
+<h1 id="unit-2-organising-and-displaying-data">Unit 2: Organising and
+Displaying Data</h1><button class="done-btn" data-unit="unit-2-organising-and-displaying-data" type="button">Mark as studied</button>
+<h2 id="raw-data-and-organised-data">2.1 Raw data and organised
+data</h2>
+<p><strong>Raw (ungrouped) data</strong> are scores as originally
+collected, in no particular order. They are difficult to interpret.
+<strong>Organised data</strong> are arranged in an array (ascending or
+descending order), a frequency distribution, a table or a graph.</p>
+<h2 id="coding-categorical-variables">2.2 Coding categorical
+variables</h2>
+<p>Categorical responses are converted to numbers for analysis: Gender
+(1 = Male, 2 = Female); Location (1 = Urban, 2 = Rural); Likert (5 =
+Strongly agree … 1 = Strongly disagree). A <strong>codebook</strong>
+documents every variable name, label, code values and missing-value
+codes (e.g., 99 = no response). Numbers on nominal variables are labels
+only: the mean of a gender code is meaningless.</p>
+<h2 id="tabulation">2.3 Tabulation</h2>
+<p><strong>Tabulation</strong> is the systematic arrangement of data in
+rows and columns.</p>
+<p><strong>Essential components of a table:</strong> (1) table number;
+(2) title (what, where, when); (3) caption or column headings; (4) stub
+or row headings; (5) body; (6) head note (units); (7) footnote and
+source note.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+<tr class="odd">
+<th>Simple (one-way) table</th>
+<th>Data classified on one characteristic (e.g., students by grade)</th>
+</tr>
+<tr class="header">
+<th>Two-way (cross) table</th>
+<th>Two characteristics (e.g., gender × result)</th>
+</tr>
+<tr class="odd">
+<th>Complex (manifold) table</th>
+<th>Three or more characteristics</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><strong>Example of a two-way table: Results of Grade 8 students by
+gender (hypothetical)</strong></p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Gender</strong></th>
+<th><strong>Pass</strong></th>
+<th><strong>Fail</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Boys</strong></th>
+<th>42</th>
+<th>8</th>
+<th>50</th>
+</tr>
+<tr class="header">
+<th><strong>Girls</strong></th>
+<th>45</th>
+<th>5</th>
+<th>50</th>
+</tr>
+<tr class="odd">
+<th><strong>Total</strong></th>
+<th>87</th>
+<th>13</th>
+<th>100</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<h2 id="frequency-distribution">2.4 Frequency distribution</h2>
+<p>A <strong>frequency distribution</strong> is a table showing how
+often each score or group of scores occurs.</p>
+<ul>
+<li><p><strong>Simple (ungrouped) frequency distribution:</strong> lists
+each score with its frequency; used when the range is small.</p></li>
+<li><p><strong>Grouped frequency distribution:</strong> scores are
+grouped into <strong>class intervals</strong>; used when the range is
+large.</p></li>
+<li><p><strong>Relative frequency</strong> (proportion = f/N),
+<strong>percentage frequency</strong>, <strong>cumulative
+frequency</strong> (cf) and <strong>cumulative
+percentage</strong>.</p></li>
+</ul>
+<h3 id="steps-in-constructing-a-grouped-frequency-distribution-garrett-1973">Steps
+in constructing a grouped frequency distribution (Garrett, 1973)</h3>
+<ol type="1">
+<li><p>Find the <strong>range</strong> = highest score − lowest
+score.</p></li>
+<li><p>Decide the number of class intervals (usually 5–15; Sturges' rule
+k ≈ 1 + 3.322 log N).</p></li>
+<li><p>Determine the <strong>class width</strong> (i) = range ÷ number
+of classes, rounded to a convenient number (2, 3, 5, 10).</p></li>
+<li><p>Start the lowest class at a multiple of i at or below the lowest
+score.</p></li>
+<li><p>Tally each score into its class; count frequencies; check that Σf
+= N.</p></li>
+</ol>
+<p><strong>Key terms:</strong> <em>stated (apparent) limits</em> such as
+60–69; <em>exact (real) limits</em> 59.5–69.5; <em>midpoint</em> =
+(lower limit + upper limit)/2 = 64.5.</p>
+<h3 id="worked-example-marks-of-40-students">Worked example: marks of 40
+students</h3>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Class interval</strong></th>
+<th><strong>Exact limits</strong></th>
+<th><strong>Midpoint (x)</strong></th>
+<th><strong>f</strong></th>
+<th><strong>cf</strong></th>
+<th><strong>%</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>30–39</strong></th>
+<th>29.5–39.5</th>
+<th>34.5</th>
+<th>3</th>
+<th>3</th>
+<th>7.5</th>
+</tr>
+<tr class="header">
+<th><strong>40–49</strong></th>
+<th>39.5–49.5</th>
+<th>44.5</th>
+<th>5</th>
+<th>8</th>
+<th>12.5</th>
+</tr>
+<tr class="odd">
+<th><strong>50–59</strong></th>
+<th>49.5–59.5</th>
+<th>54.5</th>
+<th>9</th>
+<th>17</th>
+<th>22.5</th>
+</tr>
+<tr class="header">
+<th><strong>60–69</strong></th>
+<th>59.5–69.5</th>
+<th>64.5</th>
+<th>12</th>
+<th>29</th>
+<th>30.0</th>
+</tr>
+<tr class="odd">
+<th><strong>70–79</strong></th>
+<th>69.5–79.5</th>
+<th>74.5</th>
+<th>7</th>
+<th>36</th>
+<th>17.5</th>
+</tr>
+<tr class="header">
+<th><strong>80–89</strong></th>
+<th>79.5–89.5</th>
+<th>84.5</th>
+<th>4</th>
+<th>40</th>
+<th>10.0</th>
+</tr>
+<tr class="odd">
+<th><strong>Total</strong></th>
+<th></th>
+<th></th>
+<th><strong>N = 40</strong></th>
+<th></th>
+<th><strong>100</strong></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p>This table is used again in Unit 3 to compute the mean, median, mode
+and standard deviation.</p>
+<h2 id="univariate-bivariate-and-multivariate-distributions">2.5
+Univariate, bivariate and multivariate distributions</h2>
+<ul>
+<li><p><strong>Univariate:</strong> the distribution of a single
+variable (marks in mathematics).</p></li>
+<li><p><strong>Bivariate:</strong> the joint distribution of two
+variables (marks in mathematics and in science), displayed in a
+cross-table or scatterplot.</p></li>
+<li><p><strong>Multivariate:</strong> three or more variables considered
+together (achievement by gender, location and SES).</p></li>
+</ul>
+<h2 id="displaying-distributions-with-graphs">2.6 Displaying
+distributions with graphs</h2>
+<p>Graphs make patterns visible at a glance, aid comparison and are
+remembered more easily. A good graph has a clear title, labelled axes
+with units, an appropriate scale (Y-axis usually starting at zero for
+bar graphs; height about two-thirds to three-quarters of width), a
+legend where needed, and no unnecessary decoration ("chartjunk", Tufte,
+1983).</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Graph</strong></th>
+<th><strong>Data</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Bar graph</strong></th>
+<th>Nominal or ordinal</th>
+<th>Separate bars for categories; gaps between bars</th>
+</tr>
+<tr class="header">
+<th><strong>Pie chart</strong></th>
+<th>Nominal (parts of a whole)</th>
+<th>Sectors proportional to percentages (angle = % × 3.6°)</th>
+</tr>
+<tr class="odd">
+<th><strong>Histogram</strong></th>
+<th>Interval or ratio (grouped)</th>
+<th>Adjacent bars on exact limits; area represents frequency</th>
+</tr>
+<tr class="header">
+<th><strong>Frequency polygon</strong></th>
+<th>Interval or ratio</th>
+<th>Points at class midpoints joined by straight lines, closed at both
+ends</th>
+</tr>
+<tr class="odd">
+<th><strong>Ogive (cumulative frequency curve)</strong></th>
+<th>Interval or ratio</th>
+<th>Cumulative frequencies plotted at upper exact limits; used to read
+median and percentiles</th>
+</tr>
+<tr class="header">
+<th><strong>Stem-and-leaf display (Tukey)</strong></th>
+<th>Small data sets</th>
+<th>Retains actual values</th>
+</tr>
+<tr class="odd">
+<th><strong>Line graph</strong></th>
+<th>Time series</th>
+<th>Trends over time (e.g., enrolment 2010–2024)</th>
+</tr>
+<tr class="header">
+<th><strong>Boxplot</strong></th>
+<th>Interval or ratio</th>
+<th>Five-number summary; shows outliers</th>
+</tr>
+<tr class="odd">
+<th><strong>Scatterplot</strong></th>
+<th>Two interval variables</th>
+<th>Relationship (Unit 4)</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><img alt="A histogram with its frequency polygon (illustrative test scores)" loading="lazy" src="media/PC126_Statistics_in_Education/media/3ca2582bf4c1f587e4af708bd5efd63b9e654e22.png" title="A histogram with its frequency polygon (illustrative test scores)"/></p>
+<p><strong>Figure 4.</strong> <em>A histogram with its frequency polygon
+(illustrative test scores)</em></p>
+<h3 id="shapes-of-distributions">Shapes of distributions</h3>
+<ul>
+<li><p><strong>Symmetrical:</strong> the two halves mirror each other
+(normal, bell-shaped).</p></li>
+<li><p><strong>Positively skewed:</strong> tail to the right; most
+scores are low (a very difficult test).</p></li>
+<li><p><strong>Negatively skewed:</strong> tail to the left; most scores
+are high (a very easy test).</p></li>
+<li><p><strong>Kurtosis:</strong> peakedness:
+<strong>leptokurtic</strong> (tall, thin), <strong>mesokurtic</strong>
+(normal), <strong>platykurtic</strong> (flat).</p></li>
+<li><p><strong>Modality:</strong> unimodal, bimodal (two peaks, perhaps
+two different groups), multimodal; <strong>rectangular</strong>
+(uniform).</p></li>
+</ul>
+<p><img alt="Symmetrical and skewed distributions and the positions of mean, median and mode" loading="lazy" src="media/PC126_Statistics_in_Education/media/14b2b5470c5a57f1c555b08757ed0ce685cb449c.png" title="Symmetrical and skewed distributions and the positions of mean, median and mode"/></p>
+<p><strong>Figure 5.</strong> <em>Symmetrical and skewed distributions
+and the positions of mean, median and mode</em></p>
+<p><img alt="Kurtosis: leptokurtic, mesokurtic and platykurtic distributions" loading="lazy" src="media/PC126_Statistics_in_Education/media/951df248962c05bf7b607265e0bba2a70c7b7a36.png" title="Kurtosis: leptokurtic, mesokurtic and platykurtic distributions"/></p>
+<p><strong>Figure 6.</strong> <em>Kurtosis: leptokurtic, mesokurtic and
+platykurtic distributions</em></p>
+<h2 id="the-five-number-summary-and-boxplots">2.7 The five-number
+summary and boxplots</h2>
+<p>John Tukey (1977) proposed the <strong>five-number summary</strong>:
+minimum, first quartile (Q1), median (Q2), third quartile (Q3) and
+maximum. The <strong>boxplot</strong> (box-and-whisker plot) displays
+it.</p>
+<ul>
+<li><p>The <strong>box</strong> runs from Q1 to Q3 and contains the
+middle 50% of scores; its length is the <strong>interquartile range (IQR
+= Q3 − Q1)</strong>.</p></li>
+<li><p>The line inside the box is the <strong>median</strong>.</p></li>
+<li><p><strong>Whiskers</strong> extend to the most extreme scores
+within 1.5 × IQR of the box.</p></li>
+<li><p>Points beyond 1.5 × IQR are plotted as
+<strong>outliers</strong>.</p></li>
+</ul>
+<p><strong>Example:</strong> For the scores 11, 12, 13, 14, 15, 15, 16,
+17, 18, 19: minimum = 11, Q1 = 13, median = 15, Q3 = 17, maximum = 19;
+IQR = 4. <em>(Quartiles here are the medians of the lower and upper
+halves; software may use slightly different interpolation
+rules.)</em></p>
+<p><img alt="Boxplots comparing three groups: centre, spread, skewness and outliers" loading="lazy" src="media/PC126_Statistics_in_Education/media/55c455c5bd101fba8ef5d9ddb173bdc8d97b0d5c.png" title="Boxplots comparing three groups: centre, spread, skewness and outliers"/></p>
+<p><strong>Figure 7.</strong> <em>Boxplots comparing three groups:
+centre, spread, skewness and outliers</em></p>
+<h2 id="lab-exercises-excel-and-spss">2.8 Lab exercises: Excel and
+SPSS</h2>
+<h3 id="lab-1-microsoft-excel-for-statistics">Lab 1: Microsoft Excel for
+statistics</h3>
+<ul>
+<li><p>Workbook, worksheet, cells, rows (cases) and columns
+(variables).</p></li>
+<li><p>Useful functions: =SUM(), =AVERAGE(), =MEDIAN(), =MODE.SNGL(),
+=STDEV.S(), =STDEV.P(), =VAR.S(), =MIN(), =MAX(), =QUARTILE.INC(),
+=CORREL(), =COUNTIF(), =FREQUENCY(), =STANDARDIZE(),
+=NORM.S.DIST().</p></li>
+<li><p>Enable <strong>Data Analysis ToolPak</strong> (File → Options →
+Add-ins) for Descriptive Statistics, Histogram, Correlation, Regression
+and t-tests.</p></li>
+<li><p>Insert → Charts for bar, pie, histogram, line and scatter
+charts.</p></li>
+</ul>
+<h3 id="lab-2-introducing-ibm-spss-statistics">Lab 2: Introducing IBM
+SPSS Statistics</h3>
+<ul>
+<li><p><strong>Data View</strong> (rows = cases, columns = variables)
+and <strong>Variable View</strong> (Name, Type, Width, Decimals, Label,
+Values, Missing, Measure: Nominal, Ordinal or Scale).</p></li>
+<li><p><strong>Output Viewer</strong> shows tables and charts;
+<strong>Syntax Editor</strong> records commands for
+reproducibility.</p></li>
+</ul>
+<h3 id="lab-3-data-entry">Lab 3: Data entry</h3>
+<ol type="1">
+<li><p>Prepare a codebook.</p></li>
+<li><p>Define variables in Variable View with labels and value labels (1
+= Male, 2 = Female).</p></li>
+<li><p>Enter data case by case in Data View; save as .sav.</p></li>
+<li><p>Check for errors: Analyze → Descriptive Statistics → Frequencies
+(look for out-of-range values).</p></li>
+</ol>
+<h3 id="lab-4-frequency-tables-and-graphs">Lab 4: Frequency tables and
+graphs</h3>
+<ul>
+<li><p><strong>SPSS:</strong> Analyze → Descriptive Statistics →
+Frequencies → select variables → Charts (bar, pie, histogram with normal
+curve). Graphs → Chart Builder for boxplots and scatterplots. Transform
+→ Recode into Different Variables to create class intervals.</p></li>
+<li><p><strong>Excel:</strong> PivotTable for frequency counts;
+=FREQUENCY(data, bins); Insert → Histogram.</p></li>
+</ul>
+<div class="box box-exam"><div class="box-label">Exam Focus</div>
+<p>Likely questions: "Construct a grouped frequency distribution from
+the given scores and draw a histogram and frequency polygon." "What are
+the essential parts of a statistical table?" "What is a boxplot? Explain
+the five-number summary."</p></div>
+<h1 id="unit-3-summarising-and-describing-data">Unit 3: Summarising and
+Describing Data</h1><button class="done-btn" data-unit="unit-3-summarising-and-describing-data" type="button">Mark as studied</button>
+<h2 id="central-tendency-concept-and-purpose">3.1 Central tendency:
+concept and purpose</h2>
+<p>A <strong>measure of central tendency</strong> is a single value that
+represents the centre or typical value of a distribution (Gravetter
+&amp; Wallnau, 2017). Its purposes: to give a concise summary of a whole
+set of scores, to compare groups, and to serve as the basis for further
+statistics.</p>
+<p><strong>Characteristics of a good average</strong> (Yule): rigidly
+defined; based on all observations; easy to understand and calculate;
+capable of further algebraic treatment; least affected by sampling
+fluctuations; not unduly affected by extreme values.</p>
+<h2 id="the-mean">3.2 The mean</h2>
+<p>The <strong>arithmetic mean</strong> is the sum of scores divided by
+the number of scores.</p>
+<ul>
+<li><p>Ungrouped data: <strong>x̄ = ΣX / n</strong> (population μ = ΣX /
+N)</p></li>
+<li><p>Grouped data: <strong>x̄ = Σfx / N</strong>, where x is the class
+midpoint.</p></li>
+<li><p>Weighted mean: x̄w = Σwx / Σw (e.g., combining GPA across courses
+with different credits).</p></li>
+</ul>
+<p><strong>Worked example (ungrouped):</strong> scores 12, 15, 11, 18,
+14, 16, 13, 15, 17, 19. ΣX = 150, n = 10, so <strong>x̄ =
+15</strong>.</p>
+<p><strong>Worked example (grouped, table in 2.4):</strong> Σfx = (3 ×
+34.5) + (5 × 44.5) + (9 × 54.5) + (12 × 64.5) + (7 × 74.5) + (4 × 84.5)
+= 103.5 + 222.5 + 490.5 + 774 + 521.5 + 338 = 2450. <strong>x̄ = 2450 /
+40 = 61.25</strong>.</p>
+<p><strong>Properties:</strong> the sum of deviations from the mean is
+zero, Σ(X − x̄) = 0; the sum of squared deviations from the mean is
+smaller than from any other value (least squares); adding a constant to
+every score adds that constant to the mean; multiplying every score by a
+constant multiplies the mean by it.</p>
+<h2 id="the-median">3.3 The median</h2>
+<p>The <strong>median</strong> is the middle score when scores are
+arranged in order: the point that divides the distribution into two
+equal halves (50th percentile).</p>
+<ul>
+<li><p>Ungrouped data: position = (n + 1)/2. For odd n, the middle
+score; for even n, the average of the two middle scores.
+<em>Example:</em> ordered 11, 12, 13, 14, <strong>15, 15</strong>, 16,
+17, 18, 19 → median = (15 + 15)/2 = <strong>15</strong>.</p></li>
+<li><p>Grouped data: <strong>Mdn = L + [(N/2 − cf) / fm] × i</strong>,
+where L = exact lower limit of the median class, cf = cumulative
+frequency below that class, fm = frequency of the median class, i =
+class width.</p></li>
+</ul>
+<p><strong>Worked example (grouped):</strong> N/2 = 20; the cumulative
+frequency first reaches 20 in class 60–69 (cf below = 17). L = 59.5, fm
+= 12, i = 10. <strong>Mdn = 59.5 + [(20 − 17)/12] × 10 = 59.5 + 2.5 =
+62.0</strong>.</p>
+<h2 id="the-mode">3.4 The mode</h2>
+<p>The <strong>mode</strong> is the score or category that occurs most
+frequently.</p>
+<ul>
+<li><p>Ungrouped: in the example, 15 occurs twice, so <strong>mode =
+15</strong>.</p></li>
+<li><p>Grouped (crude mode): midpoint of the modal class =
+64.5.</p></li>
+<li><p>Grouped (formula): <strong>Mo = L + [(f₁ − f₀) / (2f₁ − f₀ − f₂)]
+× i</strong>, where f₁ = frequency of modal class, f₀ = of the class
+before, f₂ = of the class after. <em>Example:</em> Mo = 59.5 + [(12 −
+9)/(24 − 9 − 7)] × 10 = 59.5 + 3.75 = <strong>63.25</strong>.</p></li>
+<li><p>Empirical relationship (Karl Pearson) for moderately skewed
+distributions: <strong>Mode ≈ 3 Median − 2 Mean</strong> = 3(62) −
+2(61.25) = 63.5.</p></li>
+</ul>
+<h2 id="comparison-and-selection-of-mean-median-and-mode">3.5 Comparison
+and selection of mean, median and mode</h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Criterion</strong></th>
+<th><strong>Mean</strong></th>
+<th><strong>Median</strong></th>
+<th><strong>Mode</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Scale required</strong></th>
+<th>Interval or ratio</th>
+<th>Ordinal or higher</th>
+<th>Any (only one for nominal)</th>
+</tr>
+<tr class="header">
+<th><strong>Uses all scores</strong></th>
+<th>Yes</th>
+<th>No</th>
+<th>No</th>
+</tr>
+<tr class="odd">
+<th><strong>Affected by extreme scores</strong></th>
+<th>Strongly</th>
+<th>Little</th>
+<th>No</th>
+</tr>
+<tr class="header">
+<th><strong>Open-ended classes</strong></th>
+<th>Cannot compute</th>
+<th>Can compute</th>
+<th>Can compute</th>
+</tr>
+<tr class="odd">
+<th><strong>Further algebraic use</strong></th>
+<th>Excellent (SD, t-test)</th>
+<th>Limited</th>
+<th>Very limited</th>
+</tr>
+<tr class="header">
+<th><strong>Sampling stability</strong></th>
+<th>Most stable</th>
+<th>Less</th>
+<th>Least</th>
+</tr>
+<tr class="odd">
+<th><strong>Best used when</strong></th>
+<th>Distribution is symmetrical; further analysis needed</th>
+<th>Distribution is skewed (income, reaction time) or has outliers</th>
+<th>Nominal data; quickest estimate; most typical case</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><strong>Position in skewed distributions:</strong> in a symmetrical
+distribution mean = median = mode. In a <strong>positively
+skewed</strong> distribution mode &lt; median &lt; mean (the mean is
+pulled toward the tail). In a <strong>negatively skewed</strong>
+distribution mean &lt; median &lt; mode.</p>
+<h2 id="deviations-around-the-mean">3.6 Deviations around the mean</h2>
+<p>A <strong>deviation score</strong> is x = X − x̄. Deviations show how
+far and in what direction each score lies from the mean. Their sum is
+always zero; therefore to measure spread we use absolute deviations
+(mean deviation) or squared deviations (variance and SD).</p>
+<h2 id="variability-dispersion">3.7 Variability (dispersion)</h2>
+<p><strong>Variability</strong> describes how spread out or clustered
+the scores are. Two classes may have the same mean (60) but very
+different spreads: one homogeneous, one heterogeneous. Measures of
+variability show how well the average represents the data and are
+essential for inference.</p>
+<p><img alt="Same mean, different spread: why variability matters" loading="lazy" src="media/PC126_Statistics_in_Education/media/542a15af84d285a0f93459e2d75ae342a4c936d8.png" title="Same mean, different spread: why variability matters"/></p>
+<p><strong>Figure 8.</strong> <em>Same mean, different spread: why
+variability matters</em></p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Measure</strong></th>
+<th><strong>Formula</strong></th>
+<th><strong>Comment</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Range</strong></th>
+<th>Highest − Lowest (or exclusive: H − L + 1 for inclusive range)</th>
+<th>Quick but based on two extreme scores only</th>
+</tr>
+<tr class="header">
+<th><strong>Quartile deviation (QD, semi-interquartile
+range)</strong></th>
+<th>QD = (Q3 − Q1) / 2</th>
+<th>Used with the median; not affected by extremes</th>
+</tr>
+<tr class="odd">
+<th><strong>Interquartile range (IQR)</strong></th>
+<th>Q3 − Q1</th>
+<th>Range of the middle 50%; used in boxplots</th>
+</tr>
+<tr class="header">
+<th><strong>Mean (average) deviation (MD)</strong></th>
+<th>MD = Σ|X − x̄| / n</th>
+<th>Uses all scores but ignores signs; little used in inference</th>
+</tr>
+<tr class="odd">
+<th><strong>Variance</strong></th>
+<th>σ² = Σ(X − μ)² / N; s² = Σ(X − x̄)² / (n − 1)</th>
+<th>Mean of squared deviations</th>
+</tr>
+<tr class="header">
+<th><strong>Standard deviation (SD)</strong></th>
+<th>σ = √[Σ(X − μ)² / N]; s = √[Σ(X − x̄)² / (n − 1)]</th>
+<th>Most important and stable measure; introduced by Karl Pearson
+(1893)</th>
+</tr>
+<tr class="odd">
+<th><strong>Coefficient of variation (CV)</strong></th>
+<th>CV = (SD / x̄) × 100</th>
+<th>Relative variability; compares groups with different means or
+units</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<div class="box box-note"><div class="box-label">Note</div>
+<p>Why n − 1? A sample tends to underestimate population variability.
+Dividing by n − 1 (the <strong>degrees of freedom</strong>) gives an
+unbiased estimate of the population variance (Bessel's
+correction).</p></div>
+<h3 id="worked-example-ungrouped">Worked example (ungrouped)</h3>
+<p>Scores: 11, 12, 13, 14, 15, 15, 16, 17, 18, 19; x̄ = 15.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>X</strong></th>
+<th><strong>x = X − x̄</strong></th>
+<th><strong>|x|</strong></th>
+<th><strong>x²</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>11</strong></th>
+<th>−4</th>
+<th>4</th>
+<th>16</th>
+</tr>
+<tr class="header">
+<th><strong>12</strong></th>
+<th>−3</th>
+<th>3</th>
+<th>9</th>
+</tr>
+<tr class="odd">
+<th><strong>13</strong></th>
+<th>−2</th>
+<th>2</th>
+<th>4</th>
+</tr>
+<tr class="header">
+<th><strong>14</strong></th>
+<th>−1</th>
+<th>1</th>
+<th>1</th>
+</tr>
+<tr class="odd">
+<th><strong>15</strong></th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+<tr class="header">
+<th><strong>15</strong></th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+<tr class="odd">
+<th><strong>16</strong></th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+</tr>
+<tr class="header">
+<th><strong>17</strong></th>
+<th>2</th>
+<th>2</th>
+<th>4</th>
+</tr>
+<tr class="odd">
+<th><strong>18</strong></th>
+<th>3</th>
+<th>3</th>
+<th>9</th>
+</tr>
+<tr class="header">
+<th><strong>19</strong></th>
+<th>4</th>
+<th>4</th>
+<th>16</th>
+</tr>
+<tr class="odd">
+<th><strong>Σ</strong></th>
+<th><strong>0</strong></th>
+<th><strong>20</strong></th>
+<th><strong>60</strong></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<ul>
+<li><p>Range = 19 − 11 = <strong>8</strong></p></li>
+<li><p>Q1 = 13, Q3 = 17; IQR = <strong>4</strong>; QD =
+<strong>2</strong></p></li>
+<li><p>MD = 20 / 10 = <strong>2.0</strong></p></li>
+<li><p>Population variance σ² = 60 / 10 = <strong>6.0</strong>; σ = √6 =
+<strong>2.45</strong></p></li>
+<li><p>Sample variance s² = 60 / 9 = <strong>6.67</strong>; s =
+<strong>2.58</strong></p></li>
+<li><p>CV = (2.45 / 15) × 100 = <strong>16.3%</strong></p></li>
+</ul>
+<h3 id="worked-example-grouped-table-in-2.4">Worked example (grouped,
+table in 2.4)</h3>
+<p>Using midpoints and x̄ = 61.25: Σf(x − x̄)² = 7477.5. σ² = 7477.5 / 40
+= 186.94; <strong>σ = 13.67</strong>.</p>
+<p><strong>Interpretation:</strong> the average mark is about 61 and a
+typical student's mark lies about 14 marks from it. In a roughly normal
+distribution about 68% of students score between 47.6 and 74.9.</p>
+<h3 id="properties-of-the-sd">Properties of the SD</h3>
+<p>Adding a constant to every score does not change the SD; multiplying
+every score by a constant multiplies the SD by that constant; SD is
+always ≥ 0; it is zero only when all scores are equal.</p>
+<h2 id="lab-5-central-tendency-and-dispersion-in-excel-and-spss">3.8 Lab
+5: central tendency and dispersion in Excel and SPSS</h2>
+<ul>
+<li><p><strong>Excel:</strong> =AVERAGE(A2:A41), =MEDIAN(),
+=MODE.SNGL(), =STDEV.S(), =VAR.S(), =QUARTILE.INC(range,1); or Data →
+Data Analysis → Descriptive Statistics (tick Summary
+statistics).</p></li>
+<li><p><strong>SPSS:</strong> Analyze → Descriptive Statistics →
+Frequencies → Statistics (mean, median, mode, SD, variance, range,
+quartiles, skewness, kurtosis); or Analyze → Descriptive Statistics →
+Descriptives; Analyze → Descriptive Statistics → Explore for boxplots
+and statistics by groups.</p></li>
+</ul>
+<div class="box box-exam"><div class="box-label">Exam Focus</div>
+<p>Likely questions: "Compute the mean, median and mode from the given
+frequency distribution." "Compare the mean, median and mode. Which would
+you use for skewed data and why?" "Define standard deviation and compute
+it from the given data." "Why is SD considered the best measure of
+variability?"</p></div>
+<h1 id="unit-4-studying-relationships">Unit 4: Studying
+Relationships</h1><button class="done-btn" data-unit="unit-4-studying-relationships" type="button">Mark as studied</button>
+<h2 id="importance-of-studying-relationships">4.1 Importance of studying
+relationships</h2>
+<p>Many educational questions concern how variables go together: Are
+students who study longer more successful? Is anxiety related to test
+performance? Do SSC results predict university GPA? Relationships help
+us <strong>describe</strong>, <strong>predict</strong> and form
+hypotheses about causes (which are then tested experimentally).</p>
+<h2 id="correlation-meaning-uses-and-types">4.2 Correlation: meaning,
+uses and types</h2>
+<p><strong>Correlation</strong> is a statistical technique that measures
+and describes the relationship between two variables (Gravetter &amp;
+Wallnau, 2017). The <strong>coefficient of correlation</strong> (r) is a
+single number describing the <strong>direction</strong> and
+<strong>degree (strength)</strong> of the linear relationship.</p>
+<p><strong>Uses:</strong> prediction (selection and admission);
+establishing test reliability (test–retest, split-half) and validity
+(criterion validity); testing theories; identifying variables for
+further study.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Basis</strong></th>
+<th><strong>Types</strong></th>
+</tr>
+<tr class="odd">
+<th>Direction</th>
+<th><strong>Positive</strong> (both increase together: study time and
+marks), <strong>negative</strong> (one increases as the other decreases:
+absence and marks), <strong>zero</strong> (no relationship: shoe size
+and marks)</th>
+</tr>
+<tr class="header">
+<th>Number of variables</th>
+<th><strong>Simple</strong> (two variables), <strong>partial</strong>
+(two variables controlling a third), <strong>multiple</strong> (one
+variable with a combination of others: R)</th>
+</tr>
+<tr class="odd">
+<th>Form</th>
+<th><strong>Linear</strong> (points cluster around a straight line),
+<strong>non-linear / curvilinear</strong> (e.g., anxiety and
+performance: Yerkes–Dodson)</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<h2 id="the-coefficient-of-correlation">4.3 The coefficient of
+correlation</h2>
+<ul>
+<li><p>Values range from <strong>−1.00 to +1.00</strong>.</p></li>
+<li><p>The <strong>sign</strong> shows direction; the <strong>absolute
+value</strong> shows strength.</p></li>
+<li><p>+1.00 = perfect positive; −1.00 = perfect negative; 0 = no linear
+relationship.</p></li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Value of |r| (Guilford's rule of thumb)</strong></th>
+<th><strong>Interpretation</strong></th>
+</tr>
+<tr class="odd">
+<th>Less than .20</th>
+<th>Slight, almost negligible</th>
+</tr>
+<tr class="header">
+<th>.20 – .40</th>
+<th>Low; definite but small</th>
+</tr>
+<tr class="odd">
+<th>.40 – .70</th>
+<th>Moderate; substantial</th>
+</tr>
+<tr class="header">
+<th>.70 – .90</th>
+<th>High; marked</th>
+</tr>
+<tr class="odd">
+<th>.90 – 1.00</th>
+<th>Very high; very dependable</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><strong>Coefficient of determination (r²):</strong> the proportion of
+variance in one variable explained by the other. If r = .60, r² = .36,
+so 36% of the variance is shared.</p>
+<h2 id="graphing-correlation-scatterplots">4.4 Graphing correlation:
+scatterplots</h2>
+<p>A <strong>scatterplot</strong> (scatter diagram) plots each pair of
+scores as a point (X on the horizontal axis, Y on the vertical). The
+pattern reveals direction, strength, form and outliers.</p>
+<p><img alt="Scatterplots showing positive, negative and zero correlation" loading="lazy" src="media/PC126_Statistics_in_Education/media/1eade1c2f83f423a362480741a0914ae3aca18a0.png" title="Scatterplots showing positive, negative and zero correlation"/></p>
+<p><strong>Figure 9.</strong> <em>Scatterplots showing positive,
+negative and zero correlation</em></p>
+<h2 id="computing-correlation">4.5 Computing correlation</h2>
+<h3 id="a-pearson-product-moment-correlation-r">(a) Pearson
+product-moment correlation (r)</h3>
+<p>Developed by Karl Pearson (1896). Used when both variables are
+interval or ratio, the relationship is linear and the distributions are
+roughly normal.</p>
+<p><strong>Raw-score formula:</strong></p>
+<p>r = [nΣXY − (ΣX)(ΣY)] / √{[nΣX² − (ΣX)²][nΣY² − (ΣY)²]}</p>
+<p><strong>Worked example: study hours (X) and test marks (Y) for five
+students</strong></p>
+<div class="table-wrap"><table style="width:100%;">
+
+<thead>
+<tr class="header">
+<th><strong>Student</strong></th>
+<th><strong>X</strong></th>
+<th><strong>Y</strong></th>
+<th><strong>XY</strong></th>
+<th><strong>X²</strong></th>
+<th><strong>Y²</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>A</strong></th>
+<th>2</th>
+<th>50</th>
+<th>100</th>
+<th>4</th>
+<th>2500</th>
+</tr>
+<tr class="header">
+<th><strong>B</strong></th>
+<th>4</th>
+<th>55</th>
+<th>220</th>
+<th>16</th>
+<th>3025</th>
+</tr>
+<tr class="odd">
+<th><strong>C</strong></th>
+<th>6</th>
+<th>65</th>
+<th>390</th>
+<th>36</th>
+<th>4225</th>
+</tr>
+<tr class="header">
+<th><strong>D</strong></th>
+<th>8</th>
+<th>70</th>
+<th>560</th>
+<th>64</th>
+<th>4900</th>
+</tr>
+<tr class="odd">
+<th><strong>E</strong></th>
+<th>10</th>
+<th>85</th>
+<th>850</th>
+<th>100</th>
+<th>7225</th>
+</tr>
+<tr class="header">
+<th><strong>Σ</strong></th>
+<th><strong>30</strong></th>
+<th><strong>325</strong></th>
+<th><strong>2120</strong></th>
+<th><strong>220</strong></th>
+<th><strong>21875</strong></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p>Numerator = 5(2120) − (30)(325) = 10600 − 9750 = 850.</p>
+<p>Denominator = √{[5(220) − 900][5(21875) − 105625]} = √{(200)(3750)} =
+√750000 = 866.03.</p>
+<p><strong>r = 850 / 866.03 = 0.98</strong>: a very high positive
+correlation; r² = 0.96, so 96% of the variance in marks is associated
+with study hours (in this small illustrative sample).</p>
+<h3 id="b-spearmans-rank-order-correlation-ρ-or-rs">(b) Spearman's
+rank-order correlation (ρ or rs)</h3>
+<p>Developed by Charles Spearman (1904). Used for ordinal (ranked) data,
+small samples, or when assumptions of Pearson's r are not met.</p>
+<p><strong>ρ = 1 − [6Σd²] / [n(n² − 1)]</strong>, where d = difference
+between the two ranks of each individual.</p>
+<p><strong>Worked example:</strong> two judges rank six students' debate
+performances.</p>
+<div class="table-wrap"><table style="width:100%;">
+
+<thead>
+<tr class="header">
+<th><strong>Student</strong></th>
+<th><strong>Rank by Judge 1</strong></th>
+<th><strong>Rank by Judge 2</strong></th>
+<th><strong>d</strong></th>
+<th><strong>d²</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>P</strong></th>
+<th>1</th>
+<th>2</th>
+<th>−1</th>
+<th>1</th>
+</tr>
+<tr class="header">
+<th><strong>Q</strong></th>
+<th>2</th>
+<th>1</th>
+<th>1</th>
+<th>1</th>
+</tr>
+<tr class="odd">
+<th><strong>R</strong></th>
+<th>3</th>
+<th>4</th>
+<th>−1</th>
+<th>1</th>
+</tr>
+<tr class="header">
+<th><strong>S</strong></th>
+<th>4</th>
+<th>3</th>
+<th>1</th>
+<th>1</th>
+</tr>
+<tr class="odd">
+<th><strong>T</strong></th>
+<th>5</th>
+<th>6</th>
+<th>−1</th>
+<th>1</th>
+</tr>
+<tr class="header">
+<th><strong>U</strong></th>
+<th>6</th>
+<th>5</th>
+<th>1</th>
+<th>1</th>
+</tr>
+<tr class="odd">
+<th></th>
+<th></th>
+<th></th>
+<th><strong>Σd = 0</strong></th>
+<th><strong>Σd² = 6</strong></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p>ρ = 1 − (6 × 6) / [6(36 − 1)] = 1 − 36/210 = <strong>0.83</strong>:
+high agreement between the judges. <em>(Tied ranks receive the average
+of the ranks they occupy.)</em></p>
+<h3 id="other-coefficients-for-reference">Other coefficients (for
+reference)</h3>
+<p>Point-biserial (one dichotomous, one continuous variable: used in
+item analysis), phi coefficient (two dichotomous variables), Kendall's
+tau (ranks), contingency coefficient (nominal × nominal).</p>
+<h2 id="interpreting-correlation-correlation-and-causation">4.6
+Interpreting correlation; correlation and causation</h2>
+<ul>
+<li><p>Interpret both <strong>direction</strong> and
+<strong>strength</strong>, and report r² for practical meaning.</p></li>
+<li><p>Check <strong>statistical significance</strong> (is r different
+from zero beyond chance, given n?).</p></li>
+<li><p>Correlation describes association only. <strong>Correlation does
+not imply causation:</strong> a third variable (e.g., family
+socioeconomic status) may influence both, or the direction of influence
+may be reversed.</p></li>
+<li><p>r is affected by <strong>restriction of range</strong> (a narrow
+range lowers r), <strong>outliers</strong>, and
+<strong>non-linearity</strong> (a curved relationship can give r ≈
+0).</p></li>
+</ul>
+<div class="box box-note"><div class="box-label">Note</div>
+<p>Classic example: the number of school libraries in districts may
+correlate with the number of crimes, because both increase with
+population size. The third variable (population) explains the
+association.</p></div>
+<h2 id="regression-meaning-and-use">4.7 Regression: meaning and use</h2>
+<p><strong>Regression</strong> is a technique for
+<strong>predicting</strong> the value of one variable (the criterion or
+dependent variable, Y) from another (the predictor or independent
+variable, X) using the best-fitting straight line. Sir Francis Galton
+(1886) coined the term "regression toward the mean".</p>
+<p><strong>Simple linear regression model:</strong> <strong>Ŷ = a +
+bX</strong>, where Ŷ = predicted score; a = intercept (value of Ŷ when X
+= 0); b = slope (change in Y for one-unit change in X).</p>
+<ul>
+<li><p>b = [nΣXY − (ΣX)(ΣY)] / [nΣX² − (ΣX)²]</p></li>
+<li><p>a = Ȳ − b X̄</p></li>
+</ul>
+<p><strong>Worked example (data from 4.5):</strong> b = 850 / 200 =
+<strong>4.25</strong>; X̄ = 6, Ȳ = 65; a = 65 − 4.25(6) =
+<strong>39.5</strong>. Regression equation: <strong>Ŷ = 39.5 +
+4.25X</strong>. A student who studies 7 hours is predicted to score 39.5
++ 29.75 = <strong>69.25</strong>.</p>
+<p><strong>Interpretation:</strong> each additional hour of study is
+associated with an increase of 4.25 marks. The
+<strong>least-squares</strong> line minimises the sum of squared
+prediction errors (residuals, Y − Ŷ). The <strong>standard error of
+estimate</strong> describes the average prediction error.</p>
+<p><strong>Multiple regression</strong> uses several predictors: Ŷ = a +
+b₁X₁ + b₂X₂ + … (e.g., predicting achievement from study time,
+attendance and parental education). R² shows the proportion of variance
+explained.</p>
+<h2 id="lab-6-correlation-and-regression-in-spss">4.8 Lab 6: correlation
+and regression in SPSS</h2>
+<ul>
+<li><p>Graphs → Chart Builder → Scatter/Dot (add a fit line).</p></li>
+<li><p>Analyze → Correlate → Bivariate → select variables → tick Pearson
+and/or Spearman → two-tailed → OK. Output: r, Sig. (p) and N.</p></li>
+<li><p>Analyze → Regression → Linear → Dependent (Y), Independent (X) →
+OK. Read R², the ANOVA table, and coefficients (B constant = a, B for X
+= b).</p></li>
+<li><p>Excel: =CORREL(), =SLOPE(), =INTERCEPT(), =RSQ(), or Data
+Analysis → Regression.</p></li>
+</ul>
+<div class="box box-exam"><div class="box-label">Exam Focus</div>
+<p>Likely questions: "What is correlation? Explain its types with
+scatterplots." "Compute Pearson's r (or Spearman's rho) from the given
+data and interpret it." "Correlation does not imply causation. Explain."
+"Find the regression equation of Y on X and predict Y for a given
+X."</p></div>
+<h1 id="unit-5-probability-and-inferential-statistics">Unit 5:
+Probability and Inferential Statistics</h1><button class="done-btn" data-unit="unit-5-probability-and-inferential-statistics" type="button">Mark as studied</button>
+<h2 id="basic-concepts-of-probability">5.1 Basic concepts of
+probability</h2>
+<p><strong>Probability</strong> is the likelihood that an event will
+occur, expressed as a number from 0 (impossible) to 1 (certain).</p>
+<ul>
+<li><p><strong>Classical (a priori) definition:</strong> P(A) = number
+of favourable outcomes / total number of equally likely outcomes.
+Probability of a head on a fair coin = 1/2.</p></li>
+<li><p><strong>Relative frequency (empirical) definition:</strong> P(A)
+= number of times A occurred / total number of trials, in the long
+run.</p></li>
+<li><p><strong>Subjective probability:</strong> a personal degree of
+belief.</p></li>
+</ul>
+<p><strong>Key terms:</strong> <em>experiment</em> (a process with
+uncertain outcomes), <em>sample space</em> (S: all possible outcomes),
+<em>event</em> (a subset of outcomes), <em>mutually exclusive
+events</em> (cannot occur together), <em>independent events</em> (the
+occurrence of one does not affect the other), <em>complementary
+events</em> (A and not-A).</p>
+<h2 id="random-variables">5.2 Random variables</h2>
+<p>A <strong>random variable</strong> assigns a numerical value to each
+outcome of a random experiment.</p>
+<ul>
+<li><p><strong>Discrete random variable:</strong> takes countable values
+(number of correct answers on a 10-item test; number of girls in a
+family of three).</p></li>
+<li><p><strong>Continuous random variable:</strong> takes any value
+within an interval (height, reaction time, test anxiety score treated as
+continuous).</p></li>
+</ul>
+<h2 id="basic-rules-of-probability">5.3 Basic rules of probability</h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Rule</strong></th>
+<th><strong>Formula</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Range</strong></th>
+<th>0 ≤ P(A) ≤ 1</th>
+<th></th>
+</tr>
+<tr class="header">
+<th><strong>Complement</strong></th>
+<th>P(not A) = 1 − P(A)</th>
+<th>If P(pass) = 0.8, P(fail) = 0.2</th>
+</tr>
+<tr class="odd">
+<th><strong>Addition rule (mutually exclusive)</strong></th>
+<th>P(A or B) = P(A) + P(B)</th>
+<th>P(rolling 1 or 2) = 1/6 + 1/6 = 1/3</th>
+</tr>
+<tr class="header">
+<th><strong>Addition rule (general)</strong></th>
+<th>P(A or B) = P(A) + P(B) − P(A and B)</th>
+<th></th>
+</tr>
+<tr class="odd">
+<th><strong>Multiplication rule (independent)</strong></th>
+<th>P(A and B) = P(A) × P(B)</th>
+<th>P(two heads in two tosses) = 1/2 × 1/2 = 1/4</th>
+</tr>
+<tr class="header">
+<th><strong>Conditional probability</strong></th>
+<th>P(A|B) = P(A and B) / P(B)</th>
+<th>Probability of passing given attendance above 80%</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><strong>Application:</strong> if a student guesses on a 4-option MCQ,
+P(correct) = 0.25; the probability of guessing two items correctly =
+0.25 × 0.25 = 0.0625. This is why correction-for-guessing formulas are
+used in testing.</p>
+<h2 id="probability-distributions">5.4 Probability distributions</h2>
+<p>A <strong>probability distribution</strong> lists all values of a
+random variable and their probabilities (summing to 1).</p>
+<ul>
+<li><p><strong>Discrete distributions:</strong> binomial (number of
+successes in n independent trials with probability p, e.g., correct
+guesses on a true–false test: mean = np, SD = √npq), Poisson.</p></li>
+<li><p><strong>Continuous distributions:</strong> normal, t, chi-square
+(χ²), F. For continuous variables probability is the <strong>area under
+the curve</strong> between two values.</p></li>
+</ul>
+<h2 id="the-normal-distribution">5.5 The normal distribution</h2>
+<p>The <strong>normal distribution</strong> (Gaussian curve; de Moivre
+1733, Laplace and Gauss) is the most important distribution in
+statistics. Many human characteristics (height, intelligence,
+achievement in large groups) and the sampling distributions of means are
+approximately normal (central limit theorem).</p>
+<h3 id="properties-of-the-normal-curve">Properties of the normal
+curve</h3>
+<ol type="1">
+<li><p>Bell-shaped, <strong>symmetrical</strong> about the
+mean.</p></li>
+<li><p>Mean = median = mode, at the centre.</p></li>
+<li><p><strong>Asymptotic:</strong> the tails approach but never touch
+the X-axis.</p></li>
+<li><p>Total area under the curve = 1 (100%).</p></li>
+<li><p>Unimodal; points of inflection at ±1σ.</p></li>
+<li><p>Defined fully by two parameters: μ and σ.</p></li>
+<li><p>Skewness = 0; kurtosis = 3 (mesokurtic).</p></li>
+<li><p><strong>Empirical rule:</strong> about <strong>68.26%</strong> of
+cases lie within ±1σ, <strong>95.44%</strong> within ±2σ,
+<strong>99.74%</strong> within ±3σ.</p></li>
+</ol>
+<p><img alt="The normal probability curve with standard deviations, z-scores and T-scores" loading="lazy" src="media/PC126_Statistics_in_Education/media/90cbba06f1290e6d2f43fb5bd2a80745cba8773d.png" title="The normal probability curve with standard deviations, z-scores and T-scores"/></p>
+<p><strong>Figure 10.</strong> <em>The normal probability curve with
+standard deviations, z-scores and T-scores</em></p>
+<h3 id="the-family-of-normal-distributions-and-the-standard-normal-distribution">The
+family of normal distributions and the standard normal distribution</h3>
+<p>There is a different normal curve for every combination of μ and σ (a
+family of curves). Any normal distribution can be converted into the
+<strong>standard normal distribution</strong> (μ = 0, σ = 1) using
+<strong>z-scores</strong>:</p>
+<p><strong>z = (X − μ) / σ</strong></p>
+<p><strong>Worked example:</strong> In a test with mean 60 and SD 10,
+Rahim scores 75. z = (75 − 60) / 10 = <strong>+1.5</strong>. From the
+normal table, the area below z = 1.5 is .9332, so Rahim scored higher
+than about <strong>93%</strong> of the group (percentile rank ≈ 93). His
+<strong>T-score</strong> = 50 + 10z = <strong>65</strong>.</p>
+<p><strong>Uses of the normal curve in education:</strong> converting
+raw scores into standard scores to compare performance across tests;
+computing percentile ranks; grading on the curve ("stanines": 4%, 7%,
+12%, 17%, 20%, 17%, 12%, 7%, 4%); determining the difficulty of test
+items; checking the normality assumption for parametric tests;
+establishing confidence intervals and significance tests.</p>
+<p><strong>Divergence from normality:</strong> skewness and kurtosis
+(Unit 2). Causes include selection of a special sample, a test that is
+too easy or too difficult, a small sample, or a test that does not
+discriminate.</p>
+<h2 id="statistical-inference-meaning-purpose-and-use">5.6 Statistical
+inference: meaning, purpose and use</h2>
+<p><strong>Statistical inference</strong> is the process of drawing
+conclusions about a population from sample data, with a known
+probability of error. It has two branches: <strong>estimation</strong>
+and <strong>hypothesis testing</strong>.</p>
+<ul>
+<li><p><strong>Sampling distribution:</strong> the distribution of a
+statistic (e.g., the mean) over all possible samples of size n.</p></li>
+<li><p><strong>Standard error of the mean (SEM):</strong> SE = σ / √n
+(or s / √n). It decreases as n increases.</p></li>
+<li><p><strong>Central limit theorem:</strong> for large n (≥ 30), the
+sampling distribution of the mean is approximately normal whatever the
+shape of the population.</p></li>
+</ul>
+<h2 id="statistical-estimation">5.7 Statistical estimation</h2>
+<div class="table-wrap"><table style="width:100%;">
+
+<thead>
+<tr class="header">
+<th><strong>Type</strong></th>
+<th><strong>Meaning</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Point estimate</strong></th>
+<th>A single value used to estimate a parameter</th>
+<th>Sample mean x̄ = 62 estimates μ</th>
+</tr>
+<tr class="header">
+<th><strong>Interval estimate (confidence interval)</strong></th>
+<th>A range within which the parameter is expected to lie with a stated
+confidence</th>
+<th><strong>95% CI = x̄ ± 1.96 (SE)</strong></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><strong>Worked example:</strong> A random sample of 100 students has
+mean 62 and SD 10. SE = 10 / √100 = 1. 95% CI = 62 ± 1.96(1) =
+<strong>60.04 to 63.96</strong>. We are 95% confident that the
+population mean lies in this interval. For 99% confidence use 2.58.</p>
+<h2 id="hypothesis-testing">5.8 Hypothesis testing</h2>
+<p><img alt="Steps in testing a statistical hypothesis" loading="lazy" src="media/PC126_Statistics_in_Education/media/a3aabbb2ae901bc214c95bbadc171c3bfeedcfa2.png" title="Steps in testing a statistical hypothesis"/></p>
+<p><strong>Figure 11.</strong> <em>Steps in testing a statistical
+hypothesis</em></p>
+<ul>
+<li><p><strong>Null hypothesis (H₀):</strong> no difference or no
+relationship (μ₁ = μ₂).</p></li>
+<li><p><strong>Alternative hypothesis (H₁):</strong> there is a
+difference (μ₁ ≠ μ₂, two-tailed) or a difference in a specified
+direction (μ₁ &gt; μ₂, one-tailed).</p></li>
+<li><p><strong>Level of significance (α):</strong> the probability of
+rejecting a true H₀ that the researcher is willing to accept (usually
+.05).</p></li>
+<li><p><strong>p-value:</strong> the probability of obtaining results at
+least as extreme as those observed if H₀ were true. If p ≤ α, the result
+is <strong>statistically significant</strong>.</p></li>
+<li><p><strong>Degrees of freedom (df):</strong> the number of values
+free to vary (e.g., n − 1 for one sample; n₁ + n₂ − 2 for an independent
+t-test).</p></li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Decision</strong></th>
+<th><strong>H₀ is actually true</strong></th>
+<th><strong>H₀ is actually false</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Reject H₀</strong></th>
+<th><strong>Type I error</strong> (α): false positive</th>
+<th>Correct decision (<strong>power</strong> = 1 − β)</th>
+</tr>
+<tr class="header">
+<th><strong>Retain H₀</strong></th>
+<th>Correct decision</th>
+<th><strong>Type II error</strong> (β): false negative</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<div class="box box-key"><div class="box-label">Key Point</div>
+<p>Statistical significance is not the same as practical importance.
+With large samples, tiny differences can be significant. Always report
+an <strong>effect size</strong> (Cohen's d: 0.2 small, 0.5 medium, 0.8
+large; r or η²) along with p.</p></div>
+<h2 id="parametric-and-non-parametric-statistics">5.9 Parametric and
+non-parametric statistics</h2>
+<p><strong>Parametric tests</strong> assume interval or ratio data,
+normal distribution in the population, homogeneity of variance and
+independent observations. <strong>Non-parametric (distribution-free)
+tests</strong> make fewer assumptions and are used for nominal or
+ordinal data, small samples or skewed distributions.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Purpose</strong></th>
+<th><strong>Parametric test</strong></th>
+<th><strong>Non-parametric equivalent</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Compare a sample mean with a known value</strong></th>
+<th>One-sample t-test (z-test if σ known, large n)</th>
+<th>Wilcoxon signed-rank (one sample)</th>
+</tr>
+<tr class="header">
+<th><strong>Compare two independent groups</strong></th>
+<th><strong>Independent-samples t-test</strong></th>
+<th><strong>Mann–Whitney U</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Compare two related measurements (pre–post)</strong></th>
+<th><strong>Paired-samples t-test</strong></th>
+<th><strong>Wilcoxon signed-rank</strong></th>
+</tr>
+<tr class="header">
+<th><strong>Compare three or more independent groups</strong></th>
+<th><strong>One-way ANOVA (F)</strong></th>
+<th><strong>Kruskal–Wallis H</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Compare three or more related measurements</strong></th>
+<th>Repeated-measures ANOVA</th>
+<th>Friedman test</th>
+</tr>
+<tr class="header">
+<th><strong>Relationship between two variables</strong></th>
+<th><strong>Pearson r</strong></th>
+<th><strong>Spearman ρ</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Association between two categorical variables</strong></th>
+<th>—</th>
+<th><strong>Chi-square (χ²) test of independence</strong></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Parametric</strong></th>
+<th><strong>Non-parametric</strong></th>
+</tr>
+<tr class="odd">
+<th>More powerful when assumptions are met</th>
+<th>Less powerful but more robust</th>
+</tr>
+<tr class="header">
+<th>Interval or ratio data</th>
+<th>Nominal or ordinal data</th>
+</tr>
+<tr class="odd">
+<th>Assumes normality</th>
+<th>Distribution-free</th>
+</tr>
+<tr class="header">
+<th>Tests means and variances</th>
+<th>Tests medians, ranks or frequencies</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<h2 id="lab-7-hypothesis-testing-in-spss">5.10 Lab 7: hypothesis testing
+in SPSS</h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Test</strong></th>
+<th><strong>SPSS menu</strong></th>
+<th><strong>Key output</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>Independent-samples t-test</strong></th>
+<th>Analyze → Compare Means → Independent-Samples T Test (test variable
+= score; grouping variable = gender, define groups 1 and 2)</th>
+<th>Levene's test (equal variances), t, df, Sig. (2-tailed), mean
+difference</th>
+</tr>
+<tr class="header">
+<th><strong>Paired-samples t-test</strong></th>
+<th>Analyze → Compare Means → Paired-Samples T Test (pre and post)</th>
+<th>t, df, Sig.</th>
+</tr>
+<tr class="odd">
+<th><strong>One-way ANOVA</strong></th>
+<th>Analyze → Compare Means → One-Way ANOVA (Post Hoc: Tukey)</th>
+<th>F, df, Sig.; post-hoc comparisons</th>
+</tr>
+<tr class="header">
+<th><strong>Chi-square</strong></th>
+<th>Analyze → Descriptive Statistics → Crosstabs → Statistics →
+Chi-square</th>
+<th>χ², df, Asymp. Sig.</th>
+</tr>
+<tr class="odd">
+<th><strong>Normality check</strong></th>
+<th>Analyze → Descriptive Statistics → Explore → Plots → Normality plots
+with tests</th>
+<th>Shapiro–Wilk, Q–Q plot</th>
+</tr>
+<tr class="header">
+<th><strong>Non-parametric</strong></th>
+<th>Analyze → Nonparametric Tests → Legacy Dialogs</th>
+<th>U, H, Z, Sig.</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p><strong>Reporting in APA style:</strong> <em>An independent-samples
+t-test showed that girls (M = 68.4, SD = 9.2) scored significantly
+higher than boys (M = 63.1, SD = 10.5), t(98) = 2.69, p = .008, d =
+0.54.</em> (Hypothetical example.)</p>
+<div class="box box-exam"><div class="box-label">Exam Focus</div>
+<p>Likely questions: "State the properties of the normal curve and its
+uses in education." "Convert a raw score into a z-score and T-score and
+interpret it." "Explain point and interval estimation." "Describe the
+steps of hypothesis testing. What are Type I and Type II errors?"
+"Distinguish between parametric and non-parametric tests with
+examples."</p></div>
+<h1 id="unit-6-data-collection-analysis-and-interpretation">Unit 6: Data
+Collection, Analysis and Interpretation</h1><button class="done-btn" data-unit="unit-6-data-collection-analysis-and-interpretation" type="button">Mark as studied</button>
+<h2 id="the-statistical-investigation-cycle">6.1 The statistical
+investigation cycle</h2>
+<p>The PPDAC cycle (Wild &amp; Pfannkuch, 1999) describes how
+statisticians think through a real investigation:</p>
+<p><img alt="The PPDAC cycle of statistical enquiry (Wild &amp; Pfannkuch, 1999)" loading="lazy" src="media/PC126_Statistics_in_Education/media/6f797e342beb92b11ed3977f6259f72e8567651c.png" title="The PPDAC cycle of statistical enquiry (Wild &amp; Pfannkuch, 1999)"/></p>
+<p><strong>Figure 12.</strong> <em>The PPDAC cycle of statistical
+enquiry (Wild &amp; Pfannkuch, 1999)</em></p>
+<h2 id="clarifying-the-purpose-of-data-collection">6.2 Clarifying the
+purpose of data collection</h2>
+<p>Begin with a clear research question and decide what kind of answer
+is needed:</p>
+<ul>
+<li><p><strong>Describe</strong> (What is the average reading score of
+Grade 3 students?)</p></li>
+<li><p><strong>Compare</strong> (Do urban and rural students differ in
+mathematics achievement?)</p></li>
+<li><p><strong>Relate</strong> (Is attendance related to
+achievement?)</p></li>
+<li><p><strong>Predict</strong> (Do SSC GPAs predict HSC GPAs?)</p></li>
+</ul>
+<p>Identify the variables, their level of measurement and the population
+of interest.</p>
+<h2 id="collecting-data-from-a-sample">6.3 Collecting data from a
+sample</h2>
+<ul>
+<li><p>Define the population and sampling frame; choose a sampling
+technique and an adequate sample size (see PC 125, Unit 5).</p></li>
+<li><p>Select or develop valid and reliable instruments; pilot test
+them.</p></li>
+<li><p>Obtain permissions and informed consent.</p></li>
+<li><p>Record data carefully, using a codebook; enter data in Excel or
+SPSS; double-check entries; handle missing values consistently.</p></li>
+<li><p><strong>Data cleaning:</strong> run frequencies for every
+variable to detect impossible values; check outliers with
+boxplots.</p></li>
+</ul>
+<h2 id="selecting-appropriate-techniques-for-analysis">6.4 Selecting
+appropriate techniques for analysis</h2>
+<p><img alt="Choosing a statistical technique" loading="lazy" src="media/PC126_Statistics_in_Education/media/3c8ab8e0958e80a0fc2f46e9ba22fc2c571ef6ec.png" title="Choosing a statistical technique"/></p>
+<p><strong>Figure 13.</strong> <em>Choosing a statistical
+technique</em></p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th><strong>Question</strong></th>
+<th><strong>Data</strong></th>
+<th><strong>Technique</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>What percentage of students are girls?</strong></th>
+<th>Nominal</th>
+<th>Frequency, percentage, bar or pie chart</th>
+</tr>
+<tr class="header">
+<th><strong>What is the typical score?</strong></th>
+<th>Interval, symmetrical</th>
+<th>Mean and SD; histogram</th>
+</tr>
+<tr class="odd">
+<th><strong>What is the typical household income?</strong></th>
+<th>Ratio, skewed</th>
+<th>Median and IQR; boxplot</th>
+</tr>
+<tr class="header">
+<th><strong>Do two groups differ?</strong></th>
+<th>Interval DV, two groups</th>
+<th>Independent t-test (or Mann–Whitney)</th>
+</tr>
+<tr class="odd">
+<th><strong>Did scores improve after training?</strong></th>
+<th>Interval, pre–post</th>
+<th>Paired t-test (or Wilcoxon)</th>
+</tr>
+<tr class="header">
+<th><strong>Do three school types differ?</strong></th>
+<th>Interval DV, three groups</th>
+<th>One-way ANOVA (or Kruskal–Wallis)</th>
+</tr>
+<tr class="odd">
+<th><strong>Is gender associated with dropout?</strong></th>
+<th>Nominal × nominal</th>
+<th>Chi-square test</th>
+</tr>
+<tr class="header">
+<th><strong>Is study time related to marks?</strong></th>
+<th>Two interval variables</th>
+<th>Pearson r; scatterplot</th>
+</tr>
+<tr class="odd">
+<th><strong>Can marks be predicted from attendance?</strong></th>
+<th>Interval</th>
+<th>Regression</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<h2 id="performing-analysis-and-interpretation">6.5 Performing analysis
+and interpretation</h2>
+<ol type="1">
+<li><p><strong>Describe first:</strong> produce descriptive statistics
+and graphs for every variable; check distributions and
+assumptions.</p></li>
+<li><p><strong>Then infer:</strong> run the inferential test chosen to
+answer the question.</p></li>
+<li><p><strong>Interpret</strong> in plain language: what was found, how
+large the effect is, whether it is statistically significant, and what
+it means for teaching or policy.</p></li>
+<li><p><strong>Acknowledge limitations:</strong> sample size, sampling
+method, measurement quality, the difference between association and
+causation.</p></li>
+<li><p><strong>Report</strong> using tables and figures in APA format;
+avoid excessive decimals (two decimals for most statistics; p to three
+decimals).</p></li>
+</ol>
+<div class="box box-tip"><div class="box-label">Study tip</div><p>Practice project for this unit: collect data on study hours, attendance and test scores from about 30 classmates; describe each variable; compare boys and girls with a t-test; correlate study hours with scores; write a two-page report with one table and one graph.</p></div>
+<h2 id="statistical-literacy-and-ethics">6.6 Statistical literacy and
+ethics</h2>
+<ul>
+<li><p>Do not manipulate graphs (truncated axes, 3-D distortion) to
+exaggerate differences.</p></li>
+<li><p>Do not engage in <strong>p-hacking</strong> (running many tests
+and reporting only significant ones).</p></li>
+<li><p>Report all results honestly, including non-significant
+ones.</p></li>
+<li><p>Protect confidentiality of individual data.</p></li>
+</ul>
+<div class="box box-exam"><div class="box-label">Exam Focus</div>
+<p>Likely questions: "Describe the steps you would follow to collect,
+analyse and interpret data on students' achievement." "Which statistical
+technique would you use for each of the following research questions?
+Justify your choice."</p></div>
+<h1 id="exam-preparation-bank">Exam Preparation Bank</h1><button class="done-btn" data-unit="exam-preparation-bank" type="button">Mark as studied</button>
+<h2 id="a.-multiple-choice-questions">A. Multiple-choice questions</h2>
+<p><strong>1.</strong> A numerical characteristic of a population is
+called a:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> statistic <strong>(b)</strong> parameter
+<strong>(c)</strong> variable <strong>(d)</strong> sample</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>2.</strong> Merit position in a class is measured on which
+scale?</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> nominal <strong>(b)</strong> ordinal
+<strong>(c)</strong> interval <strong>(d)</strong> ratio</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>3.</strong> A scale with equal intervals and a true zero
+point is:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> nominal <strong>(b)</strong> ordinal
+<strong>(c)</strong> interval <strong>(d)</strong> ratio</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (d)</p></details>
+</blockquote>
+<p><strong>4.</strong> The four scales of measurement were proposed
+by:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> Pearson <strong>(b)</strong> Stevens
+<strong>(c)</strong> Spearman <strong>(d)</strong> Galton</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>5.</strong> Number of siblings is an example of a:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> continuous variable <strong>(b)</strong>
+discrete variable <strong>(c)</strong> constant <strong>(d)</strong>
+construct</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>6.</strong> The exact limits of the class interval 40–49
+are:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> 40–49 <strong>(b)</strong> 39.5–49.5
+<strong>(c)</strong> 40.5–49.5 <strong>(d)</strong> 39–50</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>7.</strong> A graph in which adjacent bars are drawn on exact
+class limits is a:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> bar graph <strong>(b)</strong> histogram
+<strong>(c)</strong> pie chart <strong>(d)</strong> ogive</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>8.</strong> The ogive is used to locate:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> mode <strong>(b)</strong> median and percentiles
+<strong>(c)</strong> mean <strong>(d)</strong> SD</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>9.</strong> The five-number summary includes all EXCEPT:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> minimum <strong>(b)</strong> median
+<strong>(c)</strong> mean <strong>(d)</strong> third quartile</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (c)</p></details>
+</blockquote>
+<p><strong>10.</strong> When a test is very difficult, the distribution
+is likely to be:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> negatively skewed <strong>(b)</strong>
+positively skewed <strong>(c)</strong> normal <strong>(d)</strong>
+platykurtic</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>11.</strong> In a positively skewed distribution:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> mean &gt; median &gt; mode <strong>(b)</strong>
+mode &gt; median &gt; mean <strong>(c)</strong> mean = median = mode
+<strong>(d)</strong> median &gt; mean &gt; mode</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (a)</p></details>
+</blockquote>
+<p><strong>12.</strong> The sum of deviations of scores from the mean is
+always:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> positive <strong>(b)</strong> negative
+<strong>(c)</strong> zero <strong>(d)</strong> one</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (c)</p></details>
+</blockquote>
+<p><strong>13.</strong> The most appropriate average for nominal data is
+the:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> mean <strong>(b)</strong> median
+<strong>(c)</strong> mode <strong>(d)</strong> geometric mean</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (c)</p></details>
+</blockquote>
+<p><strong>14.</strong> The measure most affected by extreme scores is
+the:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> mean <strong>(b)</strong> median
+<strong>(c)</strong> mode <strong>(d)</strong> quartile</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (a)</p></details>
+</blockquote>
+<p><strong>15.</strong> The mean of 4, 6, 8, 10, 12 is:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> 6 <strong>(b)</strong> 8 <strong>(c)</strong> 10
+<strong>(d)</strong> 40</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>16.</strong> Quartile deviation equals:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> Q3 − Q1 <strong>(b)</strong> (Q3 − Q1)/2
+<strong>(c)</strong> (Q3 + Q1)/2 <strong>(d)</strong> Q2 − Q1</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>17.</strong> The square of the standard deviation is the:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> range <strong>(b)</strong> variance
+<strong>(c)</strong> mean deviation <strong>(d)</strong> coefficient of
+variation</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>18.</strong> Relative variability of two groups with
+different units is compared using:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> range <strong>(b)</strong> SD
+<strong>(c)</strong> coefficient of variation <strong>(d)</strong> mean
+deviation</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (c)</p></details>
+</blockquote>
+<p><strong>19.</strong> The value of r always lies between:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> 0 and 1 <strong>(b)</strong> −1 and +1
+<strong>(c)</strong> −∞ and +∞ <strong>(d)</strong> 0 and 100</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>20.</strong> If r = 0.70, the coefficient of determination
+is:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> 0.70 <strong>(b)</strong> 0.49
+<strong>(c)</strong> 0.35 <strong>(d)</strong> 0.84</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>21.</strong> Spearman's rank correlation is appropriate
+for:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> nominal data <strong>(b)</strong> ordinal data
+<strong>(c)</strong> ratio data only <strong>(d)</strong> time-series
+data only</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>22.</strong> The term "regression" was introduced by:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> Karl Pearson <strong>(b)</strong> Francis Galton
+<strong>(c)</strong> R. A. Fisher <strong>(d)</strong> Spearman</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>23.</strong> In Ŷ = a + bX, b is the:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> intercept <strong>(b)</strong> slope
+<strong>(c)</strong> predicted score <strong>(d)</strong> residual</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>24.</strong> The percentage of cases within ±1σ in a normal
+curve is about:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> 50% <strong>(b)</strong> 68%
+<strong>(c)</strong> 95% <strong>(d)</strong> 99.7%</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>25.</strong> A z-score of 0 corresponds to a T-score of:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> 0 <strong>(b)</strong> 10 <strong>(c)</strong>
+50 <strong>(d)</strong> 100</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (c)</p></details>
+</blockquote>
+<p><strong>26.</strong> If the mean is 50 and SD is 5, the z-score for a
+raw score of 60 is:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> 1 <strong>(b)</strong> 2 <strong>(c)</strong> 10
+<strong>(d)</strong> 0.5</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>27.</strong> Rejecting a true null hypothesis is a:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> Type I error <strong>(b)</strong> Type II error
+<strong>(c)</strong> sampling error <strong>(d)</strong> correct
+decision</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (a)</p></details>
+</blockquote>
+<p><strong>28.</strong> The non-parametric equivalent of the
+independent-samples t-test is:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> Wilcoxon signed-rank test <strong>(b)</strong>
+Mann–Whitney U test <strong>(c)</strong> Kruskal–Wallis test
+<strong>(d)</strong> chi-square</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>29.</strong> To compare the means of three independent groups
+we use:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> t-test <strong>(b)</strong> one-way ANOVA
+<strong>(c)</strong> Pearson r <strong>(d)</strong> chi-square</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>30.</strong> To test whether gender is associated with
+pass/fail status we use:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> Pearson r <strong>(b)</strong> chi-square test
+<strong>(c)</strong> paired t-test <strong>(d)</strong> regression</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<p><strong>31.</strong> In SPSS, the level of measurement of a variable
+is set in:</p>
+<blockquote class="mcq-options">
+<p><strong>(a)</strong> Data View <strong>(b)</strong> Variable View
+<strong>(c)</strong> Output Viewer <strong>(d)</strong> Syntax
+Editor</p>
+<details class="answer"><summary>Show answer</summary><p>Answer: (b)</p></details>
+</blockquote>
+<h2 id="b.-short-questions">B. Short questions</h2>
+<p><strong>Q1.</strong> Define statistics. Mention four uses of
+statistics in education.</p>
+<p><strong>Q2.</strong> Distinguish between descriptive and inferential
+statistics.</p>
+<p><strong>Q3.</strong> What are discrete and continuous variables? Give
+examples.</p>
+<p><strong>Q4.</strong> Distinguish between an interval scale and a
+ratio scale.</p>
+<p><strong>Q5.</strong> What are the essential components of a
+statistical table?</p>
+<p><strong>Q6.</strong> Distinguish between a histogram and a bar
+graph.</p>
+<p><strong>Q7.</strong> What is a boxplot? What does the length of the
+box show?</p>
+<p><strong>Q8.</strong> State three properties of the arithmetic
+mean.</p>
+<p><strong>Q9.</strong> When is the median preferred to the mean?</p>
+<p><strong>Q10.</strong> Why do we divide by n − 1 when computing a
+sample variance?</p>
+<p><strong>Q11.</strong> What is the coefficient of variation? When is
+it used?</p>
+<p><strong>Q12.</strong> What is meant by "correlation does not imply
+causation"?</p>
+<p><strong>Q13.</strong> What is a regression line? State its
+equation.</p>
+<p><strong>Q14.</strong> State the addition and multiplication rules of
+probability.</p>
+<p><strong>Q15.</strong> Write any five properties of the normal
+curve.</p>
+<p><strong>Q16.</strong> Convert a score of 70 into a z-score and
+T-score if the mean is 60 and SD is 8.</p>
+<p><strong>Q17.</strong> Distinguish between point and interval
+estimation.</p>
+<p><strong>Q18.</strong> Distinguish between Type I and Type II
+errors.</p>
+<h2 id="c.-broad-questions">C. Broad questions</h2>
+<p><strong>Q19.</strong> Explain the scales of measurement with examples
+and the statistical techniques permissible for each.</p>
+<p><strong>Q20.</strong> Describe the steps in constructing a grouped
+frequency distribution. Construct one from given data and draw a
+histogram, frequency polygon and ogive.</p>
+<p><strong>Q21.</strong> Compute the mean, median and mode from the
+frequency distribution in Unit 2 and compare the three measures.</p>
+<p><strong>Q22.</strong> What is variability? Explain the measures of
+variability and compute the standard deviation from given data.</p>
+<p><strong>Q23.</strong> Define correlation. Explain its types and
+compute Pearson's r for given data. Interpret the result.</p>
+<p><strong>Q24.</strong> Compute Spearman's rank correlation for given
+ranks and explain when it is preferred to Pearson's r.</p>
+<p><strong>Q25.</strong> What is regression? Find the regression
+equation of Y on X for given data and use it for prediction.</p>
+<p><strong>Q26.</strong> Explain the normal probability curve, its
+properties and its uses in educational measurement.</p>
+<p><strong>Q27.</strong> What is statistical inference? Explain
+estimation and the steps of hypothesis testing.</p>
+<p><strong>Q28.</strong> Distinguish between parametric and
+non-parametric tests. Suggest appropriate tests for five research
+questions in education.</p>
+<p><strong>Q29.</strong> Describe how you would use SPSS to enter data,
+produce descriptive statistics, and test a hypothesis about the
+difference between two groups.</p>
+<h1 id="references">References</h1><button class="done-btn" data-unit="references" type="button">Mark as studied</button>
+<p>Field, A. (2018). <em>Discovering statistics using IBM SPSS
+Statistics</em> (5th ed.). Sage.</p>
+<p>Garrett, H. E. (1973). <em>Statistics in psychology and
+education</em> (6th ed.). Vakils, Feffer and Simons.</p>
+<p>Gravetter, F. J., &amp; Wallnau, L. B. (2017). <em>Statistics for the
+behavioral sciences</em> (10th ed.). Cengage Learning.</p>
+<p>Guilford, J. P., &amp; Fruchter, B. (1978). <em>Fundamental
+statistics in psychology and education</em> (6th ed.). McGraw-Hill.</p>
+<p>Healey, J. F. (2010). <em>The essentials of statistics: A tool for
+social research</em> (2nd ed.). Wadsworth.</p>
+<p>Heiman, G. W. (2011). <em>Basic statistics for the behavioral
+sciences</em> (6th ed.). Wadsworth.</p>
+<p>Hinkle, D. E., Wiersma, W., &amp; Jurs, S. G. (2003). <em>Applied
+statistics for the behavioral sciences</em> (5th ed.). Houghton
+Mifflin.</p>
+<p>Howell, D. C. (2007). <em>Statistical methods for psychology</em>
+(6th ed.). Thomson Wadsworth.</p>
+<p>Krejcie, R. V., &amp; Morgan, D. W. (1970). Determining sample size
+for research activities. <em>Educational and Psychological Measurement,
+30</em>(3), 607–610.</p>
+<p>Pallant, J. (2020). <em>SPSS survival manual</em> (7th ed.). Open
+University Press.</p>
+<p>Ross, S. (2010). <em>Introductory statistics</em> (3rd ed.).
+Elsevier.</p>
+<p>Stevens, S. S. (1946). On the theory of scales of measurement.
+<em>Science, 103</em>(2684), 677–680.</p>
+<p>Tufte, E. R. (1983). <em>The visual display of quantitative
+information</em>. Graphics Press.</p>
+<p>Tukey, J. W. (1977). <em>Exploratory data analysis</em>.
+Addison-Wesley.</p>
+<p>Weiss, N. A. (2012). <em>Introductory statistics</em> (9th ed.).
+Pearson.</p>
+<p>Wild, C. J., &amp; Pfannkuch, M. (1999). Statistical thinking in
+empirical enquiry. <em>International Statistical Review, 67</em>(3),
+223–265.</p>
+
+</div>
+<nav class="pager"><a class="prev" href="pc125.html"><small>Previous</small>PC 125 Introduction to Educational Research</a><a class="next" href="pc127.html"><small>Next</small>PC 127 Inclusion in Education</a></nav>
+</article>
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
