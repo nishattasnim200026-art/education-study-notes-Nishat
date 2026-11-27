@@ -328,3 +328,8 @@ body.tts-on .to-top{bottom:110px}
 body.tts-on .main{padding-bottom:180px}
 @media (max-width:640px){.tts-voice{display:none !important}.tts-bar{bottom:8px}}
 @media print{.unit-tools,.tts-bar,.skip-link{display:none !important}.unit-summary{break-inside:avoid}}
+
+.tts-speed{display:inline-flex;align-items:center;gap:6px}
+.tts-speed-label{margin-right:4px;opacity:.75}
+.tts-controls .spd{width:auto;height:36px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:inherit;font:600 13px var(--sans);cursor:pointer}
+.tts-controls .spd[aria-pressed="true"]{background:var(--gold,#C9A227);border-color:var(--gold,#C9A227);color:#1b1b1b}

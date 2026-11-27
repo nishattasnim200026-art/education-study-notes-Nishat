@@ -199,9 +199,16 @@
   }
   var synth = window.speechSynthesis;
   var nowEl = document.getElementById("ttsNow"), playBtn = document.getElementById("ttsPlay");
-  var rateSel = document.getElementById("ttsRate"), voiceSel = document.getElementById("ttsVoice");
+  var rate = 1, spdBtns = Array.prototype.slice.call(document.querySelectorAll(".spd")), voiceSel = document.getElementById("ttsVoice");
   var queue = [], idx = 0, label = "", playing = false, paused = false, current = null, token = 0;
-  try { var r = localStorage.getItem("ttsRate"); if (r) rateSel.value = r; } catch (e) {}
+  function setRate(v, announce) {
+    var best = spdBtns[1], d = 9;
+    spdBtns.forEach(function (b) { var x = Math.abs(parseFloat(b.dataset.rate) - v); if (x < d) { d = x; best = b; } });
+    rate = parseFloat(best.dataset.rate);
+    spdBtns.forEach(function (b) { b.setAttribute("aria-pressed", b === best ? "true" : "false"); });
+    if (announce) say("Speed: " + best.textContent);
+  }
+  try { var r = localStorage.getItem("ttsRate"); if (r) setRate(parseFloat(r)); } catch (e) {}
 
   // Voices
   var voices = [];
@@ -284,7 +291,7 @@
     var bn = /[ঀ-৿]/.test(item.text);
     u.lang = bn ? "bn-BD" : (document.documentElement.lang || "en");
     var v = pickVoice(bn); if (v) u.voice = v;
-    u.rate = parseFloat(rateSel.value) || 1;
+    u.rate = rate || 1;
     u.onend = function () { if (my === token && playing && !paused) speakAt(idx + 1); };
     u.onerror = function (e) { if (my === token && e.error !== "interrupted" && e.error !== "canceled") speakAt(idx + 1); };
     current = u; synth.speak(u);
@@ -339,9 +346,9 @@
   document.getElementById("ttsStop").addEventListener("click", function () { finish(false); });
   document.getElementById("ttsNext").addEventListener("click", function () { if (playing) { paused = false; setPlayIcon(); speakAt(idx + 1); } });
   document.getElementById("ttsPrev").addEventListener("click", function () { if (playing) { paused = false; setPlayIcon(); speakAt(idx - 1); } });
-  rateSel.addEventListener("change", function () { try { localStorage.setItem("ttsRate", rateSel.value); } catch (e) {} if (playing && !paused) speakAt(idx); });
+  spdBtns.forEach(function (b) { b.addEventListener("click", function () { setRate(parseFloat(b.dataset.rate), true); try { localStorage.setItem("ttsRate", rate); } catch (e) {} if (playing && !paused) speakAt(idx); }); });
   voiceSel.addEventListener("change", function () { try { localStorage.setItem("ttsVoice", voiceSel.value === "" ? "" : voices[+voiceSel.value].name); } catch (e) {} if (playing && !paused) speakAt(idx); });
-  // Keyboard: Alt+Shift+P pause/resume, Alt+Shift+S stop, Alt+Shift+N / B next / back
+  // Keyboard: Alt+Shift+P pause/resume, S stop, N / B next / back, 1/2/3 slow/medium/fast
   document.addEventListener("keydown", function (e) {
     if (!e.altKey || !e.shiftKey) return;
     var k = e.key.toLowerCase();
@@ -349,6 +356,7 @@
     else if (k === "s") { e.preventDefault(); if (playing) finish(false); }
     else if (k === "n") { e.preventDefault(); if (playing) speakAt(idx + 1); }
     else if (k === "b") { e.preventDefault(); if (playing) speakAt(idx - 1); }
+    else if (/^Digit[123]$/.test(e.code)) { e.preventDefault(); spdBtns[+e.code.slice(5) - 1].click(); }
   });
   window.addEventListener("beforeunload", function () { synth.cancel(); });
 })();
