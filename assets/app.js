@@ -1,3 +1,6 @@
+var BN = document.documentElement.lang === "bn";
+function T(en, bn) { return BN ? bn : en; }
+function bnNum(n) { return BN ? String(n).replace(/\d/g, function (d) { return "০১২৩৪৫৬৭৮৯"[d]; }) : String(n); }
 (function () {
   "use strict";
   var KEY = "studied-v1";
@@ -34,13 +37,13 @@
       btns.forEach(function (b) {
         var d = !!set[b.dataset.unit]; if (d) n++;
         b.classList.toggle("is-done", d);
-        b.textContent = d ? "Studied" : "Mark as studied";
+        b.textContent = d ? T("Studied", "পড়া শেষ") : T("Mark as studied", "পড়া শেষ হিসেবে চিহ্নিত করুন");
         var t = document.querySelector('[data-tick="' + b.dataset.unit + '"]'); t && t.classList.toggle("done", d);
         var s = document.querySelector('[data-toc="' + b.dataset.unit + '"]'); s && s.classList.toggle("done", d);
       });
       var pct = btns.length ? Math.round(100 * n / btns.length) : 0;
       document.getElementById("pbar").style.width = pct + "%";
-      document.getElementById("ptext").textContent = n + " of " + btns.length + " chapters studied";
+      document.getElementById("ptext").textContent = BN ? (bnNum(btns.length) + "টি অধ্যায়ের মধ্যে " + bnNum(n) + "টি পড়া শেষ") : (n + " of " + btns.length + " chapters studied");
     }
     btns.forEach(function (b) {
       b.addEventListener("click", function () {
@@ -87,7 +90,7 @@
   var q = document.getElementById("q"), box = document.getElementById("results"), index = null, loading = null;
   function getIndex() {
     if (index) return Promise.resolve(index);
-    if (!loading) loading = fetch("assets/search.json").then(function (r) { return r.json(); }).then(function (d) {
+    if (!loading) loading = fetch(BN ? "assets/search-bn.json" : "assets/search.json").then(function (r) { return r.json(); }).then(function (d) {
       d.forEach(function (r) { r._l = (r.t + " " + r.x).toLowerCase(); r._t = r.t.toLowerCase(); });
       return (index = d);
     });
@@ -115,7 +118,7 @@
       }
       hits.sort(function (a, b) { return b[0] - a[0]; });
       hits = hits.slice(0, 30);
-      if (!hits.length) { box.innerHTML = '<div class="r-empty">No matches for “' + esc(q.value) + '”.</div>'; box.hidden = false; return; }
+      if (!hits.length) { box.innerHTML = '<div class="r-empty">' + T("No matches for “", "কোনো ফল পাওয়া যায়নি: “") + esc(q.value) + '”.</div>'; box.hidden = false; return; }
       box.innerHTML = hits.map(function (h) {
         var r = h[1], pos = r.x.toLowerCase().indexOf(terms[0]), start = Math.max(0, pos - 60);
         var snip = (start ? "…" : "") + r.x.substr(start, 170) + "…";
@@ -156,29 +159,29 @@
       pool = shuffle(all.filter(function (m) { return !sel.value || m.p === sel.value; }).slice());
       right = 0; done = 0; score(); next();
     }
-    function score() { scoreEl.textContent = "Score " + right + " / " + done; }
+    function score() { scoreEl.textContent = T("Score ", "স্কোর ") + bnNum(right) + " / " + bnNum(done); }
     function next() {
       if (!pool.length) {
-        quiz.innerHTML = '<div class="qcard"><p class="qtext">Round finished: ' + right + " of " + done + ' correct.</p><button class="btn" id="again">Start again</button></div>';
+        quiz.innerHTML = '<div class="qcard"><p class="qtext">' + (BN ? "এই পর্ব শেষ: " + bnNum(done) + "টির মধ্যে " + bnNum(right) + "টি সঠিক।" : "Round finished: " + right + " of " + done + " correct.") + '</p><button class="btn" id="again">' + T("Start again", "আবার শুরু করুন") + '</button></div>';
         document.getElementById("again").onclick = reset; return;
       }
       var m = pool.pop(), L = "abcde";
-      quiz.innerHTML = '<div class="qcard"><div class="qsrc">' + esc(m.code) + ' · <a href="' + m.p + '#exam-preparation-bank">open bank</a> · ' + pool.length + ' left</div>' +
+      quiz.innerHTML = '<div class="qcard"><div class="qsrc">' + esc(m.code) + ' · <a href="' + (BN ? "bn-" : "") + m.p + '#exam-preparation-bank">' + T("open bank", "প্রশ্নব্যাংক খুলুন") + '</a> · ' + (BN ? bnNum(pool.length) + "টি বাকি" : pool.length + " left") + '</div>' +
         '<div class="qtext">' + esc(m.q) + '</div><div class="qopts">' +
         m.o.map(function (o, i) { return '<button data-i="' + i + '">(' + L[i] + ") " + esc(o) + "</button>"; }).join("") +
-        '</div><div class="qfoot"><span class="qexp"></span><button class="btn" id="nextQ" hidden>Next question</button></div></div>';
+        '</div><div class="qfoot"><span class="qexp"></span><button class="btn" id="nextQ" hidden>' + T("Next question", "পরের প্রশ্ন") + '</button></div></div>';
       var bs = quiz.querySelectorAll(".qopts button");
       bs.forEach(function (b) {
         b.onclick = function () {
           var i = +b.dataset.i; done++; if (i === m.c) right++; score();
           bs.forEach(function (x) { x.disabled = true; });
           bs[m.c].classList.add("right"); if (i !== m.c) b.classList.add("wrong");
-          quiz.querySelector(".qexp").textContent = (i === m.c ? "Correct. " : "Answer: (" + L[m.c] + "). ") + (m.e || "");
+          quiz.querySelector(".qexp").textContent = (i === m.c ? T("Correct. ", "সঠিক। ") : T("Answer: (", "উত্তর: (") + L[m.c] + "). ") + (m.e || "");
           var n = document.getElementById("nextQ"); n.hidden = false; n.onclick = next; n.focus();
         };
       });
     }
-    fetch("assets/mcq.json").then(function (r) { return r.json(); }).then(function (d) {
+    fetch(BN ? "assets/mcq-bn.json" : "assets/mcq.json").then(function (r) { return r.json(); }).then(function (d) {
       all = d; var p = new URLSearchParams(location.search).get("course"); if (p) sel.value = p; reset();
     });
     sel.addEventListener("change", reset);
@@ -194,7 +197,7 @@
   var live = document.getElementById("ttsLive");
   function say(msg) { if (live) { live.textContent = ""; setTimeout(function () { live.textContent = msg; }, 50); } }
   if (!("speechSynthesis" in window)) {
-    btns.forEach(function (b) { b.disabled = true; b.title = "Read aloud is not supported in this browser"; });
+    btns.forEach(function (b) { b.disabled = true; b.title = T("Read aloud is not supported in this browser", "এই ব্রাউজারে পড়ে শোনানোর সুবিধা নেই"); });
     return;
   }
   var synth = window.speechSynthesis;
@@ -206,7 +209,7 @@
     spdBtns.forEach(function (b) { var x = Math.abs(parseFloat(b.dataset.rate) - v); if (x < d) { d = x; best = b; } });
     rate = parseFloat(best.dataset.rate);
     spdBtns.forEach(function (b) { b.setAttribute("aria-pressed", b === best ? "true" : "false"); });
-    if (announce) say("Speed: " + best.textContent);
+    if (announce) say(T("Speed: ", "গতি: ") + best.textContent);
   }
   try { var r = localStorage.getItem("ttsRate"); if (r) setRate(parseFloat(r)); } catch (e) {}
 
@@ -216,12 +219,14 @@
     voices = synth.getVoices().filter(function (v) { return /^(en|bn)/i.test(v.lang); });
     if (!voices.length) voices = synth.getVoices();
     var saved = ""; try { saved = localStorage.getItem("ttsVoice") || ""; } catch (e) {}
-    voiceSel.innerHTML = '<option value="">Default</option>' + voices.map(function (v, i) {
+    voiceSel.innerHTML = '<option value="">' + T("Default", "স্বয়ংক্রিয়") + '</option>' + voices.map(function (v, i) {
       return '<option value="' + i + '"' + (v.name === saved ? " selected" : "") + ">" + v.name.replace(/</g, "") + " (" + v.lang + ")</option>";
     }).join("");
   }
   loadVoices();
   if (typeof synth.onvoiceschanged !== "undefined") synth.onvoiceschanged = loadVoices;
+  var NO_BN = "এই ডিভাইসে বাংলা কণ্ঠ পাওয়া যায়নি। Android-এ Google Text-to-Speech-এ বাংলা ভাষা যোগ করুন, অথবা Windows-এ Microsoft Edge ব্রাউজার ব্যবহার করুন।";
+  function bnMissing() { var all = synth.getVoices(); return all.length > 0 && !all.some(function (v) { return /^bn/i.test(v.lang); }); }
   function pickVoice(isBangla) {
     if (isBangla) { for (var i = 0; i < voices.length; i++) if (/^bn/i.test(voices[i].lang)) return voices[i]; return null; }
     var v = voiceSel.value; return v === "" ? null : voices[+v];
@@ -237,7 +242,7 @@
     return true;
   }
   function textFor(el) {
-    if (el.tagName === "IMG") { var a = el.getAttribute("alt") || ""; return a && a !== "Diagram" ? "Figure: " + a : ""; }
+    if (el.tagName === "IMG") { var a = el.getAttribute("alt") || ""; return a && a !== "Diagram" && a !== "চিত্র" ? T("Figure: ", "চিত্র: ") + a : ""; }
     var t = (el.innerText || el.textContent || "").replace(/\s+/g, " ").trim();
     if (/^H[1-4]$/.test(el.tagName)) t = t.replace(/\.$/, "") + ".";
     if (el.matches(".box-label,.cur-label,.cur-h")) t = t.charAt(0) + t.slice(1).toLowerCase() + ":";
@@ -286,7 +291,7 @@
     clearMark(); item.el.classList.add("tts-reading");
     var rect = item.el.getBoundingClientRect();
     if (rect.top < 80 || rect.bottom > window.innerHeight - 120) item.el.scrollIntoView({ block: "center", behavior: "smooth" });
-    nowEl.textContent = label + " · part " + (i + 1) + " of " + queue.length;
+    nowEl.textContent = label + (BN ? " · " + bnNum(queue.length) + "টির মধ্যে " + bnNum(i + 1) + " নম্বর অংশ" : " · part " + (i + 1) + " of " + queue.length);
     var u = new SpeechSynthesisUtterance(item.text);
     var bn = /[ঀ-৿]/.test(item.text);
     u.lang = bn ? "bn-BD" : (document.documentElement.lang || "en");
@@ -297,25 +302,28 @@
     current = u; synth.speak(u);
   }
   function start(q, name) {
-    if (!q.length) { say("Nothing to read here."); return; }
+    if (!q.length) { say(T("Nothing to read here.", "এখানে পড়ার মতো কিছু নেই।")); return; }
     queue = q; label = name; playing = true; paused = false;
     bar.hidden = false; document.body.classList.add("tts-on");
-    setPlayIcon(); say("Reading " + name + ". Use the player at the bottom of the page to pause, skip or stop.");
+    var warn = document.getElementById("ttsWarn");
+    if (BN && bnMissing()) { if (!warn) { warn = document.createElement("div"); warn.id = "ttsWarn"; warn.className = "tts-warn"; bar.appendChild(warn); } warn.textContent = NO_BN; }
+    else if (warn) warn.remove();
+    setPlayIcon(); say(BN ? name + " পড়ে শোনানো হচ্ছে। থামাতে, এগোতে বা বন্ধ করতে পাতার নিচের প্লেয়ার ব্যবহার করুন।" + (bnMissing() ? " " + NO_BN : "") : "Reading " + name + ". Use the player at the bottom of the page to pause, skip or stop.");
     setTimeout(function () { speakAt(0); }, 350);
   }
   function finish(done) {
     token++; synth.cancel(); playing = false; paused = false; clearMark();
     bar.hidden = true; document.body.classList.remove("tts-on");
-    say(done ? "Finished reading " + label + "." : "Reading stopped.");
+    say(done ? T("Finished reading " + label + ".", label + " পড়া শেষ হয়েছে।") : T("Reading stopped.", "পড়া বন্ধ হয়েছে।"));
   }
   function setPlayIcon() {
     playBtn.textContent = paused ? "▶" : "⏸";
-    playBtn.setAttribute("aria-label", paused ? "Resume reading" : "Pause reading");
+    playBtn.setAttribute("aria-label", paused ? T("Resume reading", "আবার পড়া শুরু করুন") : T("Pause reading", "পড়া থামান"));
   }
   function togglePause() {
     if (!playing) return;
-    if (paused) { paused = false; speakAt(idx); say("Resumed."); }
-    else { paused = true; token++; synth.cancel(); say("Paused."); }
+    if (paused) { paused = false; speakAt(idx); say(T("Resumed.", "আবার শুরু হয়েছে।")); }
+    else { paused = true; token++; synth.cancel(); say(T("Paused.", "থামানো হয়েছে।")); }
     setPlayIcon();
   }
   // Chrome stops long speech after ~15s without this nudge
@@ -328,7 +336,7 @@
         var course = document.querySelector(".course");
         q = collect([course.querySelector(".course-title"), course.querySelector(".subtitle")].filter(Boolean)
           .concat(Array.prototype.slice.call(document.querySelectorAll(".prose > *")).filter(function (n) { return !n.matches(".unit-tools,.unit-summary"); })));
-        name = "all notes";
+        name = T("all notes", "সম্পূর্ণ নোট");
       } else if (kind === "unit") {
         var h = document.getElementById(b.dataset.target);
         q = collect(chapterNodes(h)); name = (h.textContent || "").trim();
@@ -336,8 +344,8 @@
         var d = document.getElementById(b.dataset.target); d.open = true;
         var h2 = d.parentElement && d.previousElementSibling;
         var title = (document.getElementById(b.dataset.target.replace(/^sum-/, "")) || {}).textContent || "";
-        q = [{ el: d, text: "Summary of " + title.trim() + "." }].concat(collect([d.querySelector(".sum-body")]));
-        name = "summary of " + title.trim();
+        q = [{ el: d, text: T("Summary of " + title.trim() + ".", title.trim() + "-এর সারসংক্ষেপ।") }].concat(collect([d.querySelector(".sum-body")]));
+        name = T("summary of " + title.trim(), title.trim() + "-এর সারসংক্ষেপ");
       }
       start(q, name);
     });

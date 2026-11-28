@@ -333,3 +333,18 @@ body.tts-on .main{padding-bottom:180px}
 .tts-speed-label{margin-right:4px;opacity:.75}
 .tts-controls .spd{width:auto;height:36px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:inherit;font:600 13px var(--sans);cursor:pointer}
 .tts-controls .spd[aria-pressed="true"]{background:var(--gold,#C9A227);border-color:var(--gold,#C9A227);color:#1b1b1b}
+
+/* Bangla edition */
+.lang-switch{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;font:600 14px var(--sans);color:var(--ink);text-decoration:none;white-space:nowrap}
+.lang-switch:hover{border-color:var(--green,#006A4E);color:var(--green,#006A4E)}
+html[lang="bn"] body{font-family:"Noto Sans Bengali",var(--sans)}
+html[lang="bn"] .prose,html[lang="bn"] .subtitle,html[lang="bn"] .unit-summary,html[lang="bn"] .curriculum{font-family:"Noto Serif Bengali",var(--serif);line-height:1.85}
+html[lang="bn"] h1,html[lang="bn"] h2,html[lang="bn"] h3,html[lang="bn"] h4,html[lang="bn"] .course-title{font-family:"Noto Serif Bengali",var(--display,serif);letter-spacing:0;line-height:1.4}
+html[lang="bn"] .kicker,html[lang="bn"] .box-label,html[lang="bn"] .cur-label,html[lang="bn"] .side h3,html[lang="bn"] .tts-label{letter-spacing:0;text-transform:none}
+.tts-warn{flex-basis:100%;font-size:13px;color:#f5d97a;line-height:1.5}
+.bn-note{margin:0 0 18px;padding:10px 14px;border-left:3px solid var(--gold,#C9A227);background:var(--paper,transparent);font-size:14px}
+html[lang="bn"] *{letter-spacing:0 !important;text-transform:none !important}
+html[lang="bn"] .toc li::before{content:counter(t,bengali)}
+html[lang="bn"] .curriculum summary::after{content:"লুকান"}
+html[lang="bn"] .curriculum:not([open]) summary::after{content:"দেখুন"}
+html[lang="bn"] .kicker,html[lang="bn"] .box-label,html[lang="bn"] .cur-label,html[lang="bn"] .unit-summary summary,html[lang="bn"] .meta dt,html[lang="bn"] .toc summary,html[lang="bn"] .side h3{font-family:"Noto Sans Bengali",var(--sans)}
